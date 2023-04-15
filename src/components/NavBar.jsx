@@ -31,7 +31,10 @@ function NavBar({ handleThemeSwitch }) {
             </a>
           </div>
         </div>
-        <div className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer" >
+        <div
+          className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
+          onClick={() => alert("Oops! We're yet to implement features.")}
+        >
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
