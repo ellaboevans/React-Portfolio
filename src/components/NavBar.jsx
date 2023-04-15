@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
+import { navItems } from "../../data";
+
 function NavBar({ handleThemeSwitch }) {
   return (
     <nav className=" w-screen py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
@@ -11,22 +13,17 @@ function NavBar({ handleThemeSwitch }) {
           CodeConcept
         </Link>
         <div className="hidden md:flex items-center justify-between space-x-3">
+          {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
-            <Link to="/" className="hover:text-red-500 transition duration-300">
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-red-500 transition duration-300"
-            >
-              About
-            </Link>
-            <Link
-              to="/portfolio"
-              className="hover:text-red-500 transition duration-300"
-            >
-              Portfolio
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                to={item.link}
+                className="hover:text-red-500 transition duration-300"
+                key={item.id}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           <div
