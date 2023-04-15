@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import NavBar from "../components/NavBar";
 
 // Greeting based on time of day
@@ -52,8 +51,9 @@ function Home() {
             </h2>
             <p className="text-center md:px-80 dark:text-slate-400">
               I am a student and self-taught Graphics Designer, UI/UX Engineer,
-              Photographer, Mobile App Developer & a Frontend Web Developer. I also volunteer to teach
-              Graphics Design & UI/UX Design for WEBTEAM.
+              Photographer, Mobile App Developer & a Frontend Web Developer. I
+              also volunteer to teach Graphics Design & UI/UX Design for
+              WEBTEAM.
             </p>
           </div>
           <div className="mt-8">
