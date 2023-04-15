@@ -52,7 +52,7 @@ function Home() {
             </h2>
             <p className="text-center md:px-80 dark:text-slate-400">
               I am a student and self-taught Graphics Designer, UI/UX Engineer,
-              Photographer & Frontend Web Developer. I also volunteer to teach
+              Photographer, Mobile App Developer & a Frontend Web Developer. I also volunteer to teach
               Graphics Design & UI/UX Design for WEBTEAM.
             </p>
           </div>
