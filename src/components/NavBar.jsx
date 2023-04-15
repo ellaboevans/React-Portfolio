@@ -1,11 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar({ handleThemeSwitch }) {
   return (
-    <nav className=" w-screen py-4 md:px-36 dark:text-white sticky md:mt-4">
-      <div className="flex justify-center md:justify-between items-center">
+    <nav className=" w-screen py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
+      <div className="flex justify-between  md:justify-between items-center">
         <a href="#" className="text-[20px] font-semibold mt-8 md:mt-0">
           CodeConcept
         </a>
@@ -30,6 +30,9 @@ function NavBar({ handleThemeSwitch }) {
               <FontAwesomeIcon icon={faMoon} />
             </a>
           </div>
+        </div>
+        <div className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer" >
+          <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
     </nav>
