@@ -83,14 +83,14 @@ function NavBar() {
                 key={option.icon}
                 onClick={() => setTheme(option.text)}
               >
-                <ion-icon name={option.icon} title={option.icon}></ion-icon>
+                <ion-icon name={option.icon} title={option.text}></ion-icon>
               </button>
             ))}
           </div>
         </div>
         <div
           className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
-          onClick={() => alert("Oops! We're yet to implement features.")}
+          onClick={() => alert("Oops! 🙁 We're yet to implement features.")}
         >
           <FontAwesomeIcon icon={faBars} />
         </div>
