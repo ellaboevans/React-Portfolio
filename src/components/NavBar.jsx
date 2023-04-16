@@ -1,13 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-import { navItems } from "../../data";
+import { navItems, options } from "../../data";
 
-function NavBar({ handleThemeSwitch }) {
+function NavBar() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "system"
+  );
+  const element = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function onWindowMatch() {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && darkQuery.matches)
+    ) {
+      element.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+    }
+  }
+
+  onWindowMatch();
+
+  useEffect(() => {
+    switch (theme) {
+      case "dark":
+        element.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+        break;
+      case "light":
+        element.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+        break;
+      default:
+        localStorage.removeItem("theme");
+        onWindowMatch();
+        break;
+    }
+  }, [theme]);
+
+  darkQuery.addEventListener("change", (e) => {
+    if (!("theme" in localStorage))
+      if (e.matches) {
+        element.classList.add("dark");
+      } else {
+        element.classList.remove("dark");
+      }
+  });
+
   return (
-    <nav className=" w-screen py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
+    <nav className=" w-screen dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
       <div className="flex justify-between  md:justify-between items-center">
         <Link
           to="/"
@@ -29,13 +74,18 @@ function NavBar({ handleThemeSwitch }) {
             ))}
           </div>
 
-          <div
-            className="bg-gray-200 dark:bg-slate-700 p-1 px-3 dark:hover:bg-slate-500 rounded-md hover:bg-red-500 transition hover:text-white cursor-pointer"
-            onClick={handleThemeSwitch}
-          >
-            <button className="dark:text-white  text-center">
-              <FontAwesomeIcon icon={faMoon} />
-            </button>
+          <div className="bg-gray-200 dark:text-gray-100 dark:bg-slate-700 duration-100  rounded-md cursor-pointer">
+            {options.map((option) => (
+              <button
+                className={`w-8 h-8 leading-9 text-xl rounded-full m-1 ${
+                  theme === option.text && "text-sky-600"
+                }`}
+                key={option.icon}
+                onClick={() => setTheme(option.text)}
+              >
+                <ion-icon name={option.icon} title={option.icon}></ion-icon>
+              </button>
+            ))}
           </div>
         </div>
         <div
