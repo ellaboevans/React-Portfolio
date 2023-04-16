@@ -13,12 +13,9 @@ const greeting =
     : "Good Evening! 🌑";
 
 function Home() {
-  
-
-
   return (
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100">
-      <NavBar/>
+      <NavBar />
       <div className="  flex items-center px-4 md:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:my-0">
         {/* Left Side Items */}
 
@@ -59,6 +56,7 @@ function Home() {
             <button
               className="dark:text-white bg-gray-200 dark:bg-slate-700 py-2 px-4 mt-8 dark:hover:bg-slate-500 rounded-md hover:bg-red-500 transition hover:text-white cursor-pointer
             "
+              onClick={() => alert("This feature is not yet available 🙁")}
             >
               Download CV
             </button>
