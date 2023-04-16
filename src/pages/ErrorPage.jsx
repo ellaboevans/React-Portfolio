@@ -6,13 +6,22 @@ function ErrorPage() {
   return (
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
       <NavBar />
-      <div className="font-bold text-[60px] dark:text-white text-center mt-32">
-        Opps! Page not found
-      </div>
-      <div className="text-center text-[18px] font-semibold mt-8">
-        <Link to="/" className="rounded py-2 px-6 bg-slate-400">
-          Go back!
-        </Link>
+      <div className="flex flex-col items-center justify-center space-y-4">
+        <p className="font-bold text-[200px] text-gray-600 dark:text-white tracking-widest">
+          404
+        </p>
+        <div>
+          <p className="text-[50px] text-gray-600 dark:text-white tracking-wide">
+            There's
+            <span className="uppercase font-bold"> nothing</span> here!
+          </p>
+        </div>
+        <div className="flex items-center jusitfy-center space-x-3 text-[18px] rounded py-2 px-6 bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-700 text-gray-600 dark:text-white font-semibold">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          <Link to="/">
+            Go back!
+          </Link>
+        </div>
       </div>
     </div>
   );
