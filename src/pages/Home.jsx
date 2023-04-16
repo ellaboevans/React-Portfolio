@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { socialItems } from "../../data";
@@ -8,11 +8,18 @@ const time = new Date().getHours();
 const greeting =
   time < 12
     ? "Good Morning! ☀️"
-    : time < 18
+    : time < 17
     ? "Good Afternoon! 🌙"
     : "Good Evening! 🌑";
 
 function Home() {
+  // Clock display based on local time
+
+  const [clock, setClock] = useState(new Date().toLocaleTimeString());
+  setInterval(() => {
+    setClock(new Date().toLocaleTimeString());
+  });
+
   return (
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100">
       <NavBar />
@@ -40,6 +47,11 @@ function Home() {
         {/* Center Items */}
 
         <div className=" flex justify-center flex-col space-y-3 items-center">
+          <div className="bg-gray-200 py-2 px-4 dark:text-gray-100 dark:bg-slate-700 duration-100  rounded-md">
+            <p className="text-gray-800 dark:text-white font-semibold text-xl tracking-widest ">
+              {clock}
+            </p>
+          </div>
           <div className="dark:text-white text-gray-800 md:px-0">
             <h1 className="font- text-[18px] text-center">{greeting} I'm</h1>
             <h2 className="font-bold text-[40px] my-2 md:text-[65px] text-center uppercase">
