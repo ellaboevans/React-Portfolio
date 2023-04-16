@@ -13,7 +13,7 @@ function ErrorPage() {
         <div>
           <p className="text-[45px] text-center md:text-[50px] text-gray-600 dark:text-white tracking-wide">
             There's
-            <span className="uppercase font-bold"> nothing</span> here!
+            <span className="uppercase font-bold"> nothing</span> here....
           </p>
         </div>
         <div className="flex items-center jusitfy-center space-x-3 text-[18px] rounded py-2 px-6 bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-700 text-gray-600 dark:text-white font-semibold">
