@@ -9,8 +9,11 @@ function NavBar({ handleThemeSwitch }) {
   return (
     <nav className=" w-screen py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
       <div className="flex justify-between  md:justify-between items-center">
-        <Link to="/" className="text-[20px] font-semibold mt-8 md:mt-0">
-          CodeConcept
+        <Link
+          to="/"
+          className="text-[20px] text-gray-800 dark:text-white font-semibold mt-8 md:mt-0"
+        >
+          CodeConcept 🇬🇭
         </Link>
         <div className="hidden md:flex items-center justify-between space-x-3">
           {/* Navigation Items */}
