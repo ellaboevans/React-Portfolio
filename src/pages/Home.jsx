@@ -28,9 +28,9 @@ function Home() {
             <Link
               key={item.id}
               to={item.link}
-              className="dark:bg-slate-400 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 duration-500 ease"
+              className="dark:bg-slate-400 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 hover:bg-red-500 duration-500 ease"
             >
-              <ion-icon name={item.name} title="Github"></ion-icon>
+              <ion-icon name={item.name} title={item.name}></ion-icon>
             </Link>
           ))}
 
