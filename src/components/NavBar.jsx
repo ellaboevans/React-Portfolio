@@ -66,7 +66,7 @@ function NavBar() {
             {navItems.map((item) => (
               <Link
                 to={item.link}
-                className="hover:text-red-500 transition duration-300"
+                className="hover:text-red-500 dark:hover:text-sky-600 transition duration-300"
                 key={item.id}
               >
                 {item.name}
