@@ -6,7 +6,7 @@ function Portfolio() {
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
       <NavBar />
       <div className="font-bold text-[60px] dark:text-white text-center mt-32">
-        Portfolio Page
+        This page is under construction
       </div>
     </div>
   );
