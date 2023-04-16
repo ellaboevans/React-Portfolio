@@ -26,7 +26,7 @@ function Home() {
       <div className="  flex items-center px-4 md:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:my-0">
         {/* Left Side Items */}
 
-        <div className=" hidden md:flex items-center flex-col space-y-3 mt-28 md:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">
+        <div className=" hidden md:flex items-center dark:text-gray-100 flex-col space-y-3 mt-28 md:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">
           <div className="h-11 w-[2px] dark:bg-slate-400 bg-slate-800"></div>
 
           {/* Social Icons */}
@@ -35,7 +35,7 @@ function Home() {
             <Link
               key={item.id}
               to={item.link}
-              className="dark:bg-slate-400 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 hover:bg-red-500 duration-500 ease"
+              className="dark:hover:bg-sky-600 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 hover:bg-red-500 duration-500 ease"
             >
               <ion-icon name={item.name} title={item.name}></ion-icon>
             </Link>
