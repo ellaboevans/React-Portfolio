@@ -58,10 +58,10 @@ function Home() {
               Evans Elabo ✨
             </h2>
             <p className="text-center md:px-80 dark:text-slate-400">
-              I am a student and self-taught Graphics Designer, UI/UX Engineer,
-              Photographer, Mobile App Developer & a Frontend Web Developer. I
-              also volunteer to teach Graphics Design & UI/UX Design for
-              WEBTEAM.
+              I am a student and self-taught software developer specialized in
+              Mobile App Development & Frontend Web Development. I also teach
+              and mentor in the field of Web Programming, Graphics Design &
+              UI/UX Design.
             </p>
           </div>
           <div className="mt-8">
