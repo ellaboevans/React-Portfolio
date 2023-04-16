@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { socialItems } from "../../data";
