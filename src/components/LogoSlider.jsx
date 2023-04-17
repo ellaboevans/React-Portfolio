@@ -20,7 +20,7 @@ function LogoSlider() {
     centerPadding: "200px",
   };
   return (
-    <section className="w-screen bg-gray-200  dark:bg-slate-700 -mt-14 mb-11 py-2">
+    <section className="hidden md:block w-screen bg-gray-200  dark:bg-slate-700 -mt-14 mb-11 py-2">
       <Slider {...settings}>
         {sliders.map((item) => (
           <div key={item.id}>
