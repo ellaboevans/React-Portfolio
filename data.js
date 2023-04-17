@@ -7,6 +7,8 @@ import python from "./src/assets/python.png";
 import react from "./src/assets/react.png";
 import npm from "./src/assets/npm.png";
 import mongodb from "./src/assets/mongodb.png";
+import git from "./src/assets/git.png";
+import github from "./src/assets/github.png";
 
 export const navItems = [
   {
@@ -109,5 +111,15 @@ export const sliders = [
     id: 9,
     title: "MongoDB",
     img: mongodb,
+  },
+  {
+    id: 10,
+    title: "Github",
+    img: github,
+  },
+  {
+    id: 11,
+    title: "Git",
+    img: git,
   },
 ];
