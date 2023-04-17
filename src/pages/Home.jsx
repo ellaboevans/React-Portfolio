@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { socialItems } from "../../data"; 
 import NavBar from "../components/NavBar";
-import { socialItems } from "../../data";
+import LogoSlider from "../components/LogoSlider";
 
 // Greeting based on time of day
 const time = new Date().getHours();
@@ -47,7 +48,7 @@ function Home() {
         {/* Center Items */}
 
         <div className=" flex justify-center flex-col space-y-3 items-center">
-          <div className="bg-gray-200 py-2 px-4 dark:text-gray-100 dark:bg-slate-700 duration-100  rounded-md">
+          <div className="bg-gray-200 -mt-14 py-2 px-4 dark:text-gray-100 dark:bg-slate-700 duration-100  rounded-md">
             <p className="text-gray-800 dark:text-white font-semibold text-xl tracking-widest ">
               {clock}
             </p>
@@ -84,6 +85,7 @@ function Home() {
           <div className="h-11 w-[2px] dark:bg-slate-400 bg-slate-800"></div>
         </div>
       </div>
+      <LogoSlider />
     </div>
   );
 }
