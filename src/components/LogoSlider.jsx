@@ -20,7 +20,7 @@ function LogoSlider() {
     centerPadding: "200px",
   };
   return (
-    <section className=" w-screen bg-gray-200  dark:bg-slate-700 md:-mt-14 -mt-10git  mb-11 md:py-2">
+    <section className=" w-screen bg-gray-200  dark:bg-slate-700 md:-mt-14 -mt-10 mb-11 md:py-2">
       <div className="hidden md:block">
         <Slider {...settings}>
           {sliders.map((item) => (
@@ -33,7 +33,7 @@ function LogoSlider() {
       <div className="md:hidden flex items-center">
         {stacks.map((item) => (
           <div key={item.id}>
-            <img src={item.img} className="w-44 p-6" />
+            <img src={item.img} className="w-44 p-3" />
           </div>
         ))}
       </div>
