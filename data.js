@@ -123,3 +123,36 @@ export const sliders = [
     img: git,
   },
 ];
+
+export const stacks = [
+  {
+    id: 1,
+    title: "HTML",
+    img: html,
+  },
+  {
+    id: 2,
+    title: "CSS",
+    img: css,
+  },
+  {
+    id: 3,
+    title: "JavaScript",
+    img: js,
+  },
+  {
+    id: 4,
+    title: "React",
+    img: react,
+  },
+  {
+    id: 5,
+    title: "Python",
+    img: python,
+  },
+  {
+    id: 6,
+    title: "Django",
+    img: django,
+  },
+];

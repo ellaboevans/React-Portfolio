@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { sliders } from "../../data";
+import { sliders, stacks } from "../../data";
 
 function LogoSlider() {
   // Slider Settings
@@ -20,14 +20,23 @@ function LogoSlider() {
     centerPadding: "200px",
   };
   return (
-    <section className="hidden md:block w-screen bg-gray-200  dark:bg-slate-700 -mt-14 mb-11 py-2">
-      <Slider {...settings}>
-        {sliders.map((item) => (
+    <section className=" w-screen bg-gray-200  dark:bg-slate-700 md:-mt-14 -mt-10git  mb-11 md:py-2">
+      <div className="hidden md:block">
+        <Slider {...settings}>
+          {sliders.map((item) => (
+            <div key={item.id}>
+              <img src={item.img} className="md:h-24" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <div className="md:hidden flex items-center">
+        {stacks.map((item) => (
           <div key={item.id}>
-            <img src={item.img} className="md:h-24" />
+            <img src={item.img} className="w-44 p-6" />
           </div>
         ))}
-      </Slider>
+      </div>
     </section>
   );
 }
