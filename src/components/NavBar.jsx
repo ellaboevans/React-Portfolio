@@ -4,6 +4,7 @@ import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import { navItems, options } from "../../data";
+import MobileNavigation from "./MobileNavigation";
 
 function NavBar() {
   const [theme, setTheme] = useState(
@@ -51,6 +52,12 @@ function NavBar() {
       }
   });
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className=" w-screen dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
       <div className="flex justify-between  md:justify-between items-center">
@@ -60,7 +67,7 @@ function NavBar() {
         >
           CodeConcept 🇬🇭
         </Link>
-        <div className="hidden md:flex items-center justify-between space-x-3">
+        <div className="hidden md:flex  items-center justify-between space-x-3">
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItems.map((item) => (
@@ -88,13 +95,27 @@ function NavBar() {
             ))}
           </div>
         </div>
+        <div className=" dark:text-gray-100 duration-100  rounded-md cursor-pointer absolute top-[600px] right-8  px-3 ">
+          {options.map((option) => (
+            <button
+              className={`w-8 h-8 leading-9 text-xl rounded-full m-1 animate-[bounce_4s_infinite] hover:animate-none ${
+                theme === option.text && "text-sky-600"
+              }`}
+              key={option.icon}
+              onClick={() => setTheme(option.text)}
+            >
+              <ion-icon name={option.icon} title={option.text}></ion-icon>
+            </button>
+          ))}
+        </div>
         <div
           className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
-          onClick={() => alert("Oops! 🙁 We're yet to implement features.")}
+          onClick={handleToggle}
         >
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
+      {isOpen && <MobileNavigation />}
     </nav>
   );
 }
