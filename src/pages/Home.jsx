@@ -26,26 +26,6 @@ function Home() {
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100">
       <Helmet>
         <title>Evans Elabo - Home</title>
-        <meta
-          name="description"
-          content="Looking for a creative product designer and frontend web developer? Look no further than Evans Elabo! With expertise in Figma design and frontend website development, Evans brings innovative ideas to life with stunning visuals and flawless functionality. Visit the portfolio website now to see his latest work."
-        />
-        <meta name="author" content="Evans Elabo" />
-        <meta
-          name="keywords"
-          content="product design, frontend web development, Figma, portfolio"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Home" />
-        <meta
-          name="twitter:description"
-          content="Looking for a creative product designer and frontend web developer? Look no further than Evans Elabo!"
-        />
-        <meta
-          name="twitter:image"
-          content="https://t4.ftcdn.net/jpg/03/56/02/11/240_F_356021129_xu10B4UK64NAxI17YyXq3MRiKIV0R93E.jpg"
-        />
-        <meta name="twitter:image:alt" content="Site Logo" />
       </Helmet>
       <NavBar />
       <div className="  flex items-center px-4 md:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:my-0">
