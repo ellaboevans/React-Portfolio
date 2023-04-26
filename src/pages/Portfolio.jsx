@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
+import Project from "../components/Project";
 
 function Portfolio() {
   return (
@@ -10,9 +11,10 @@ function Portfolio() {
         <title>Evans Elabo - Portfolio</title>
       </Helmet>
       <NavBar />
-      <div className="font-bold text-[60px] dark:text-white text-center mt-32">
+      {/* <div className="font-bold text-[60px] dark:text-white text-center mt-32">
         Portfolio page is under construction
-      </div>
+      </div> */}
+      <Project />
       <Footer />
     </div>
   );
