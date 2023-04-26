@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Skills({ img, title, description, tools }) {
   return (
@@ -11,7 +10,6 @@ function Skills({ img, title, description, tools }) {
         <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] flex-1">
           {title}
         </p>
-        
       </div>
       <p className="text-gray-400 mb-3">{description}</p>
       <div>
