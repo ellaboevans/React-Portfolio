@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Card({ title, description, img, tag }) {
   return (
@@ -14,7 +15,13 @@ function Card({ title, description, img, tag }) {
           {tag ? tag : "No Category"}
         </p>
       </div>
-      <p className="text-gray-400">{description}</p>
+      <p className="text-gray-400 mb-3">{description}</p>
+      <Link
+        to="#"
+        className="dark:text-gray-100 text-slate-700  text-xl p-2 hover:bg-sky-600 hover:text-gray-100 rounded duration-300"
+      >
+        <ion-icon name="open-outline"></ion-icon>
+      </Link>
     </div>
   );
 }
