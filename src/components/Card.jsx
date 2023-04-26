@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ title, description, img }) {
   return (
-    <div className=" w-full p-4 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300">
+    <div className=" w-full p-4 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 cursor-pointer">
       <div>
         <img src={img} className="w-[100%] h-[200px] object-cover rounded" />
       </div>
