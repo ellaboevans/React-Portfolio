@@ -11,7 +11,7 @@ function Card({ title, description, img, tag }) {
         <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] flex-1">
           {title}
         </p>
-        <p className="py-1 px-4 text-xs dark:text-white font-bold rounded bg-gray-200 text-slate-700 dark:bg-sky-700">
+        <p className="py-1 px-2 text-xs dark:text-white font-bold rounded bg-gray-200 text-slate-700 dark:bg-sky-700">
           {tag ? tag : "No Category"}
         </p>
       </div>
