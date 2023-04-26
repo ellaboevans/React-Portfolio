@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import LogoSlider from "../components/LogoSlider";
 import Footer from "../components/Footer";
 import Project from "../components/Project";
+import Service from "../components/Service";
 
 // Greeting based on time of day
 const time = new Date().getHours();
@@ -92,6 +93,7 @@ function Home() {
         </div>
       </div>
       <LogoSlider />
+      <Service />
       <Project />
       <Footer />
     </div>
