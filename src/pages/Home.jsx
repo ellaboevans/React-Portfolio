@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { socialItems } from "../../data";
 import NavBar from "../components/NavBar";
 import LogoSlider from "../components/LogoSlider";
+import Footer from "../components/Footer";
 
 // Greeting based on time of day
 const time = new Date().getHours();
@@ -90,6 +91,7 @@ function Home() {
         </div>
       </div>
       <LogoSlider />
+      <Footer />
     </div>
   );
 }
