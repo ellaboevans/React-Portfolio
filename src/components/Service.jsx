@@ -41,6 +41,7 @@ function Service() {
         {/* Card Components */}
         {skills.map((skill) => (
           <Skills
+            key={skill.id}
             img={skill.img}
             title={skill.title}
             description={skill.description}
