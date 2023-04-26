@@ -1,14 +1,17 @@
 import React from "react";
 
-function Card({ title, description, img }) {
+function Card({ title, description, img, tag }) {
   return (
     <div className=" w-full p-4 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 cursor-pointer">
       <div>
         <img src={img} className="w-[100%] h-[200px] object-cover rounded" />
       </div>
-      <p className="dark:text-gray-200 text-slate-700 mt-2 font-semibold text-[22px]">
-        {title}
-      </p>
+      <div className="flex items-center mt-2 ">
+        <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] flex-1">
+          {title}
+        </p>
+        <p className="py-1 px-4 text-xs text-white font-bold rounded dark:bg-sky-700">{tag ? tag : "No Cat"}</p>
+      </div>
       <p className="text-gray-400">{description}</p>
     </div>
   );

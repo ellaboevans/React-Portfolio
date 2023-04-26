@@ -19,6 +19,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag="UX Design"
         />
         <Card
           img="https://images.pexels.com/photos/12745010/pexels-photo-12745010.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
@@ -26,6 +27,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag="Mobile App"
         />
         <Card
           img="https://images.pexels.com/photos/4451501/pexels-photo-4451501.jpeg"
@@ -33,6 +35,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag="UI Design"
         />
         <Card
           img="https://images.pexels.com/photos/4451501/pexels-photo-4451501.jpeg"
@@ -40,6 +43,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag=""
         />
         <Card
           img="https://images.pexels.com/photos/4451501/pexels-photo-4451501.jpeg"
@@ -47,6 +51,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag="Frontend Dev."
         />
         <Card
           img="https://images.pexels.com/photos/4451501/pexels-photo-4451501.jpeg"
@@ -54,6 +59,7 @@ function Project() {
           description=" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsa
         earum pariatur nam asperiores dicta corporis cupiditate! Eveniet, alias
         excepturi."
+        tag=""
         />
       </div>
     </section>
