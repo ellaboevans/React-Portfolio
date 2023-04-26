@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 function ErrorPage() {
   return (
@@ -21,6 +22,7 @@ function ErrorPage() {
           <Link to="/">Go back!</Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
