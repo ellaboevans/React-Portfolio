@@ -6,7 +6,7 @@ function Project() {
     <section className="w-screen py-8 dark:bg-slate-800">
       <div className="flex justify-evenly items-center">
         <div className="hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
-        <p className="dark:text-gray-200 uppercase text-slate-700 text-[28px] font-semibold">
+        <p className="dark:text-gray-200 uppercase text-slate-700 text-[22px] font-semibold">
           Some of my latest work
         </p>
         <div className=" hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
