@@ -76,7 +76,7 @@ function Home() {
             "
               onClick={() => alert("This feature is not yet available 🙁")}
             >
-              Download CV
+              Resume
             </button>
           </div>
         </div>
