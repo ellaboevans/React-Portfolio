@@ -95,7 +95,7 @@ function NavBar() {
             ))}
           </div>
         </div>
-        <div className="md:hidden dark:text-gray-100 duration-100  rounded-md cursor-pointer absolute top-[600px] right-8  px-3 ">
+        <div className="md:hidden flex flex-col  dark:text-gray-100 duration-100  rounded-md cursor-pointer absolute top-[500px] right-0  px-3 ">
           {options.map((option) => (
             <button
               className={`w-8 h-8 leading-9 text-xl rounded-full m-1 animate-[bounce_4s_infinite] hover:animate-none ${
