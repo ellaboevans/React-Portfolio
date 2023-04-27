@@ -9,7 +9,7 @@ function Service() {
       title: "Designing",
       description:
         " I create engaging and intuitive designs using tools like Figma and Adobe XD. My designs are always user-centered and tailored to the specific needs of my clients.",
-      tools: "Figma, Adobe XD, ADOBE PHOTOSHOP",
+      tools: "FIGMA, ADOBE XD, ADOBE PHOTOSHOP",
     },
     {
       id: 2,
