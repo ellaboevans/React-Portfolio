@@ -5,7 +5,7 @@ function Service() {
   const [skills, setSkills] = useState([
     {
       id: 1,
-      img: "https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg",
+      img: "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
       title: "Designing",
       description:
         " I create engaging and intuitive designs using tools like Figma and Adobe XD. My designs are always user-centered and tailored to the specific needs of my clients.",
@@ -21,7 +21,7 @@ function Service() {
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/4559592/pexels-photo-4559592.jpeg",
+      img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       title: "Mentoring",
       description:
         "I am passionate about helping others grow in their careers. I share my knowledge and experience to help aspiring developers improve their skills and achieve their goals.",
