@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { navItems, options } from "../../data";
 import MobileNavigation from "./MobileNavigation";
@@ -59,25 +59,25 @@ function NavBar() {
   };
 
   return (
-    <nav className=" w-screen dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white sticky md:mt-4">
+    <nav className=" w-screen dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white overflow-hidden">
       <div className="flex justify-between  md:justify-between items-center">
-        <Link
+        <NavLink
           to="/"
           className="text-[20px] text-gray-800 dark:text-white font-semibold mt-8 md:mt-0"
         >
           CodeConcept 🇬🇭
-        </Link>
+        </NavLink>
         <div className="hidden md:flex  items-center justify-between space-x-3">
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItems.map((item) => (
-              <Link
+              <NavLink
                 to={item.link}
                 className="hover:text-sky-600 transition duration-300"
                 key={item.id}
               >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 
