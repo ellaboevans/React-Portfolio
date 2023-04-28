@@ -3,15 +3,15 @@ import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
 import SkeletonService from "../skeletons/SkeletonService";
 
+
 function Service() {
   const [skillsData, setSkillsData] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      createClient
-        .fetch(
-          `
-     *[_type == "service"]{
+    const fetchData = async () => {
+      try {
+        const data = await createClient.fetch(`
+        *[_type == "service"]{
       title,
       description,
       tags,
@@ -23,11 +23,17 @@ function Service() {
       }
       
     }
-    `
-        )
-        .then((data) => setSkillsData(data))
-        .catch(console.error);
+        `);
+        setSkillsData(data);
+      } catch (error) {
+        console.error("Error fetching skills data:", error);
+      }
+    };
+    const timer = setTimeout(()=>{
+      fetchData()
     },2000)
+
+      return () => clearTimeout(timer);
   }, []);
 
   return (
