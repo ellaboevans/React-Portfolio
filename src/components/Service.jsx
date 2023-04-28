@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import createClient from "../client";
+import SkeletonElement from "../skeletons/SkeletonElement";
+import SkeletonService from "../skeletons/SkeletonService";
 
 function Service() {
   const [skillsData, setSkillsData] = useState(null);
 
   useEffect(() => {
-    createClient
-      .fetch(
-        `
+    setTimeout(() => {
+      createClient
+        .fetch(
+          `
      *[_type == "service"]{
       title,
       description,
@@ -21,9 +24,10 @@ function Service() {
       
     }
     `
-      )
-      .then((data) => setSkillsData(data))
-      .catch(console.error);
+        )
+        .then((data) => setSkillsData(data))
+        .catch(console.error);
+    },2000)
   }, []);
 
   return (
@@ -63,6 +67,7 @@ function Service() {
               </div>
             </div>
           ))}
+        {!skillsData && [1, 2, 3].map((n) => <SkeletonService key={n} />)}
       </div>
     </section>
   );

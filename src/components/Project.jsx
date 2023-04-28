@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import createClient from "../client";
+import SkeletonElement from "../skeletons/SkeletonElement";
 
 function Project() {
   const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
-    createClient
-      .fetch(
-        `
+   setTimeout(() => {
+     createClient
+       .fetch(
+         `
     *[_type=="project"]{
       title,
       description,
@@ -23,9 +25,10 @@ function Project() {
       link
     }
     `
-      )
-      .then((data) => setProjectData(data))
-      .catch(console.error);
+       )
+       .then((data) => setProjectData(data))
+       .catch(console.error);
+   }, 2000)
   }, []);
 
   return (
@@ -72,6 +75,7 @@ function Project() {
                 </a>
               </div>
             ))}
+          {!projectData && [1, 2, 3].map((n) => <SkeletonElement key={n} />)}
         </div>
         <div className="w-36 text-center mx-auto items-center">
           <Link to="/portfolio">

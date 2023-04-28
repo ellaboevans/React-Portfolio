@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
-import createClient from "../client"
+import createClient from "../client";
+import SkeletonElement from "../skeletons/SkeletonElement";
 
 function ProjectPortfolio() {
- const [projectData, setProjectData] = useState(null);
+  const [projectData, setProjectData] = useState(null);
 
- useEffect(() => {
-   createClient
-     .fetch(
-       `
+  useEffect(() => {
+    setTimeout(() => {
+      createClient
+        .fetch(
+          `
     *[_type=="project"]{
       title,
       description,
@@ -21,10 +23,11 @@ function ProjectPortfolio() {
       link
     }
     `
-     )
-     .then((data) => setProjectData(data))
-     .catch(console.error);
- }, []);
+        )
+        .then((data) => setProjectData(data))
+        .catch(console.error);
+    }, 2000);
+  }, []);
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
       <div className="flex justify-evenly items-center">
@@ -68,6 +71,7 @@ function ProjectPortfolio() {
               </a>
             </div>
           ))}
+        {!projectData && [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
       </div>
       {/* Pagination */}
       {/* <div className="w-[300px] flex justify-center py-2 items-center mx-auto space-x-6">
