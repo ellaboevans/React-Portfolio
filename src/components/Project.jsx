@@ -19,7 +19,7 @@ function Project() {
           url
         }
       },
-      tags,
+      category,
       link
     }
     `
@@ -58,7 +58,7 @@ function Project() {
                     {project.title}
                   </p>
                   <p className="py-1 px-2 text-xs dark:text-white font-bold rounded bg-gray-200 text-slate-700 dark:bg-sky-700">
-                    {project.tag ? project.tag : "No Category"}
+                    {project.category ? project.category : "No Category"}
                   </p>
                 </div>
                 <p className="text-gray-400 mb-3">{project.description}</p>
