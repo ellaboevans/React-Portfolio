@@ -2,24 +2,6 @@ import React, { useState, useEffect } from "react";
 import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
 
-//  createClient
-//         .fetch(
-//           `
-//     *[_type=="project"]{
-//       title,
-//       description,
-//       projectImage{
-//         asset->{
-//           _id,
-//           url
-//         }
-//       },
-//       category,
-//       link
-//     }
-//     `
-//         )
-
 function ProjectPortfolio() {
   // const itemsPerPage = 6;
   const [projectData, setProjectData] = useState(null);
@@ -46,7 +28,6 @@ function ProjectPortfolio() {
      }
       `);
 
-       
         setProjectData(data);
       } catch (error) {
         console.error("Error fetching project data:", error);
