@@ -16,7 +16,7 @@ function SkeletonElement() {
         <p className="mb-2 w-full h-3 bg-gray-300 rounded dark:bg-slate-600"></p>
         <p className="mb-2 w-full h-3 bg-gray-300 rounded dark:bg-slate-600"></p>
         <p className="mb-2 w-full h-3 bg-gray-300 rounded dark:bg-slate-600"></p>
-        <div className="w-5 h-5 roundedvbg-gray-300 dark:bg-slate-600"></div>
+        <div className="w-5 h-5 rounded bg-gray-300 dark:bg-slate-600"></div>
       </div>
     </>
   );
