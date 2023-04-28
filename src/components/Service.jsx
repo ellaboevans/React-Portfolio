@@ -27,7 +27,7 @@ function Service() {
         )
         .then((data) => setSkillsData(data))
         .catch(console.error);
-    },2000)
+    },3000)
   }, []);
 
   return (

@@ -28,7 +28,7 @@ function Project() {
        )
        .then((data) => setProjectData(data))
        .catch(console.error);
-   }, 2000)
+   }, 3000)
   }, []);
 
   return (

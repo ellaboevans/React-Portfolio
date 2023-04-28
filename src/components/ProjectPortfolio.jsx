@@ -26,7 +26,7 @@ function ProjectPortfolio() {
         )
         .then((data) => setProjectData(data))
         .catch(console.error);
-    }, 2000);
+    }, 3000);
   }, []);
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
@@ -71,7 +71,8 @@ function ProjectPortfolio() {
               </a>
             </div>
           ))}
-        {!projectData && [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
+        {!projectData &&
+          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
       </div>
       {/* Pagination */}
       {/* <div className="w-[300px] flex justify-center py-2 items-center mx-auto space-x-6">
