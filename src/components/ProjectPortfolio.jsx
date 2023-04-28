@@ -2,32 +2,63 @@ import React, { useState, useEffect } from "react";
 import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
 
+//  createClient
+//         .fetch(
+//           `
+//     *[_type=="project"]{
+//       title,
+//       description,
+//       projectImage{
+//         asset->{
+//           _id,
+//           url
+//         }
+//       },
+//       category,
+//       link
+//     }
+//     `
+//         )
+
 function ProjectPortfolio() {
+  // const itemsPerPage = 6;
   const [projectData, setProjectData] = useState(null);
+  // const [currentPage, setCurrentPage] = useState(1);
+
+  // const startIndex = (currentPage - 1) * itemsPerPage;
+  // const endIndex = startIndex + itemsPerPage;
 
   useEffect(() => {
-    setTimeout(() => {
-      createClient
-        .fetch(
-          `
-    *[_type=="project"]{
-      title,
-      description,
-      projectImage{
-        asset->{
-          _id,
-          url
-        }
-      },
-      category,
-      link
-    }
-    `
-        )
-        .then((data) => setProjectData(data))
-        .catch(console.error);
+    const fetchData = async () => {
+      try {
+        const data = await createClient.fetch(`
+      *[_type=="project"]{
+       title,
+       description,
+       projectImage{
+         asset->{
+           _id,
+           url
+         }
+       },
+       category,
+       link
+     }
+      `);
+
+       
+        setProjectData(data);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    };
+    const timer = setTimeout(() => {
+      fetchData();
     }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
+
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
       <div className="flex justify-evenly items-center">
@@ -39,6 +70,8 @@ function ProjectPortfolio() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-4">
         {/* Card Components */}
+        {!projectData &&
+          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
         {projectData &&
           projectData.map((project, index) => (
             <div
@@ -71,23 +104,21 @@ function ProjectPortfolio() {
               </a>
             </div>
           ))}
-        {!projectData &&
-          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
       </div>
       {/* Pagination */}
       {/* <div className="w-[300px] flex justify-center py-2 items-center mx-auto space-x-6">
         <button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage(currentPage - 1)}
-          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100  items-center flex rounded-full"
+          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100  items-center flex rounded-full cursor-pointer"
         >
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
 
         <button
-          disabled={endIndex >= data.length}
+          disabled={endIndex >= projectData.length}
           onClick={() => setCurrentPage(currentPage + 1)}
-          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100 items-center flex rounded-full"
+          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100 items-center flex rounded-full cursor-pointer"
         >
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </button>

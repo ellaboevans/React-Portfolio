@@ -5,30 +5,36 @@ import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
 
 function Project() {
+  const itemsPerPage = 3;
   const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      createClient
-        .fetch(
-          `
-    *[_type=="project"]{
-      title,
-      description,
-      projectImage{
-        asset->{
-          _id,
-          url
-        }
-      },
-      category,
-      link
-    }
-    `
-        )
-        .then((data) => setProjectData(data))
-        .catch(console.error);
+    const fetchData = async () => {
+      try {
+        const data = await createClient.fetch(`
+          *[_type=="project"]{
+            title,
+            description,
+            projectImage{
+              asset->{
+                url,
+              }
+            },
+            category,
+            link,
+          }
+        `);
+        const limitedData = data.slice(0, itemsPerPage);
+        setProjectData(limitedData);
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    };
+    const timer = setTimeout(() => {
+      fetchData();
     }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -42,7 +48,6 @@ function Project() {
           <div className=" hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center px-12 md:px-24 py-6 gap-4">
-          {/* Card Components */}
           {projectData &&
             projectData.map((project, index) => (
               <div
