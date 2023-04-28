@@ -1,33 +1,31 @@
-import React, { useState } from "react";
-import Skills from "./Skills";
+import React, { useEffect, useState } from "react";
+import createClient from "../client";
 
 function Service() {
-  const [skills, setSkills] = useState([
-    {
-      id: 1,
-      img: "https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      title: "Designing",
-      description:
-        " I create engaging and intuitive designs using tools like Figma and Adobe XD. My designs are always user-centered and tailored to the specific needs of my clients.",
-      tools: "FIGMA, ADOBE XD, ADOBE PHOTOSHOP",
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
-      title: "Frontend Development",
-      description:
-        " I work closely with my clients to understand their business goals and user needs, and I use my expertise to implement interfaces that are both functional and aesthetically pleasing.",
-      tools: "HTML, CSS, JAVASCRIPT, REACTJS, TAILWINDCSS",
-    },
-    {
-      id: 3,
-      img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      title: "Mentoring",
-      description:
-        "I am passionate about helping others grow in their careers. I share my knowledge and experience to help aspiring developers improve their skills and achieve their goals.",
-      tools: "DESIGN & FRONTEND DEVELOPMENT",
-    },
-  ]);
+  const [skillsData, setSkillsData] = useState(null);
+
+  useEffect(() => {
+    createClient
+      .fetch(
+        `
+     *[_type == "service"]{
+      title,
+      description,
+      tags,
+      serviceImage{
+        asset->{
+          _id,
+          url
+        }
+      }
+      
+    }
+    `
+      )
+      .then((data) => setSkillsData(data))
+      .catch(console.error);
+  }, []);
+
   return (
     <section className="w-screen py-8 dark:bg-slate-800">
       <div className="flex justify-evenly items-center">
@@ -39,15 +37,32 @@ function Service() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-4">
         {/* Card Components */}
-        {skills.map((skill) => (
-          <Skills
-            key={skill.id}
-            img={skill.img}
-            title={skill.title}
-            description={skill.description}
-            tools={skill.tools}
-          />
-        ))}
+        {skillsData &&
+          skillsData.map((skill, index) => (
+            <div
+              className=" text-center w-full p-4 dark:bg-slate-800 shadow rounded hover:shadow-lg duration-300"
+              key={index}
+            >
+              <div>
+                <img
+                  src={skill.serviceImage?.asset.url}
+                  alt={skill.title}
+                  className="w-[100%] h-[200px] object-cover rounded"
+                />
+              </div>
+              <div className="flex items-center mt-2 ">
+                <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] flex-1">
+                  {skill.title}
+                </p>
+              </div>
+              <p className="text-gray-400 mb-3">{skill.description}</p>
+              <div>
+                <p className="text-gray-400 font-semibold dark:text-gray-100 text-sm">
+                  {skill.tags}
+                </p>
+              </div>
+            </div>
+          ))}
       </div>
     </section>
   );
