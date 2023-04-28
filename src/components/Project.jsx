@@ -8,10 +8,10 @@ function Project() {
   const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
-   setTimeout(() => {
-     createClient
-       .fetch(
-         `
+    setTimeout(() => {
+      createClient
+        .fetch(
+          `
     *[_type=="project"]{
       title,
       description,
@@ -25,10 +25,10 @@ function Project() {
       link
     }
     `
-       )
-       .then((data) => setProjectData(data))
-       .catch(console.error);
-   }, 3000)
+        )
+        .then((data) => setProjectData(data))
+        .catch(console.error);
+    }, 2000);
   }, []);
 
   return (

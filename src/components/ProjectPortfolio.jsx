@@ -26,7 +26,7 @@ function ProjectPortfolio() {
         )
         .then((data) => setProjectData(data))
         .catch(console.error);
-    }, 3000);
+    }, 2000);
   }, []);
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
