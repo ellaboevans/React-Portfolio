@@ -83,7 +83,11 @@ function LogoSlider() {
           {sliderData &&
             sliderData.map((slider) => (
               <div key={slider.title}>
-                <img src={slider.sliderImage?.asset.url} className="md:h-24" />
+                <img
+                  src={slider.sliderImage?.asset.url}
+                  alt={slider.title}
+                  className="md:h-24"
+                />
               </div>
             ))}
         </Slider>
@@ -92,7 +96,11 @@ function LogoSlider() {
         {stackData &&
           stackData.map((stack, index) => (
             <div key={index}>
-              <img src={stack.stackImage?.asset.url} className="w-44 p-3" />
+              <img
+                src={stack.stackImage?.asset.url}
+                alt={stack.title}
+                className="w-44 p-3"
+              />
             </div>
           ))}
         {!stackData && [1, 2, 3, 4].map((n) => <SkeletonStack key={n} />)}
