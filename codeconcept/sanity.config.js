@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'codeConcept',
 
-  projectId: 'nzz68t9o',
+  projectId: 'b25ey7x1',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
