@@ -63,11 +63,11 @@ function ProjectPortfolio() {
                 <img
                   src={project.projectImage?.asset.url}
                   alt={project.title}
-                  className="w-[100%] h-[200px] object-cover rounded"
+                  className="w-[100%] h-[200px] object-cover  rounded"
                 />
               </div>
               <div className="flex items-center mt-2 ">
-                <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] flex-1">
+                <p className="dark:text-gray-200 text-slate-700 font-semibold text-[22px] capitalize flex-1">
                   {project.title}
                 </p>
                 <p className="py-1 px-2 text-xs dark:text-white font-bold rounded bg-gray-200 text-slate-700 dark:bg-sky-700">
