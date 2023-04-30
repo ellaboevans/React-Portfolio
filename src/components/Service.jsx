@@ -67,7 +67,7 @@ function Service() {
               </div>
               <p className="text-gray-400 mb-3">{skill.description}</p>
               <div>
-                <p className="text-gray-400 font-semibold dark:text-gray-100 text-sm">
+                <p className="text-gray-400 font-semibold dark:text-gray-100 text-sm uppercase">
                   {skill.tags}
                 </p>
               </div>
