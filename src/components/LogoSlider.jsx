@@ -103,7 +103,7 @@ function LogoSlider() {
               />
             </div>
           ))}
-        {!stackData && [1, 2, 3, 4].map((n) => <SkeletonStack key={n} />)}
+        {!stackData && [1, 2, 3, 4, 5].map((n) => <SkeletonStack key={n} />)}
       </div>
     </section>
   );
