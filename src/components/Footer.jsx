@@ -6,7 +6,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="flex dark:bg-slate-700 bg-gray-200 text-center md:text-left space-y-10 flex-col  md:flex md:space-y-0 md:flex-row items-center justify-between w-screen  py-10 px-10 md:px-36 ">
+    <footer className="flex dark:bg-slate-700 bg-gray-200 text-center md:text-left space-y-10 flex-col  md:flex md:space-y-0 md:flex-row items-center justify-between w-screen duration-100 f py-10 px-10 md:px-36 ">
       <div>
         <Link
           to="/"
