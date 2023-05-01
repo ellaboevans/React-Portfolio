@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import { Link } from "react-router-dom";
 import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
