@@ -59,7 +59,7 @@ function NavBar() {
   };
 
   return (
-    <nav className=" w-screen dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white overflow-hidden">
+    <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white overflow-hidden">
       <div className="flex justify-between  md:justify-between items-center">
         <NavLink
           to="/"
