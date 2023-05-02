@@ -45,7 +45,7 @@ function Home() {
               key={item.id}
               target="_blank"
               rel="noreferrer noopener"
-              to={item.link}
+              href={item.link}
               className="dark:hover:bg-sky-600 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 hover:bg-red-500 duration-500 ease"
             >
               <ion-icon name={item.name} title={item.name}></ion-icon>
