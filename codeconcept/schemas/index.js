@@ -2,5 +2,6 @@ import project from './project'
 import service from './service'
 import stack from "./stack"
 import slider from "./slider"
+import about from "./about"
 
-export const schemaTypes = [service, project, stack, slider]
+export const schemaTypes = [service, project, stack, slider, about]
