@@ -7,6 +7,7 @@ import LogoSlider from "../components/LogoSlider";
 import Footer from "../components/Footer";
 import Project from "../components/Project";
 import Service from "../components/Service";
+import ResumeBtn from "../components/ResumeBtn";
 
 // Greeting based on time of day
 const time = new Date().getHours();
@@ -72,16 +73,7 @@ function Home() {
               UI/UX Design.
             </p>
           </div>
-          <div className="mt-8">
-            <a
-              href="https://docs.google.com/document/d/1-I3gFV0nVhNoS-itnti1TeZJFrCxEilgrX2b_Bdo3qw/edit?usp=sharing"
-              target="_blank"
-              className="dark:text-white bg-gray-200 dark:bg-slate-700 py-2 px-4 mt-8 dark:hover:bg-slate-500 rounded-md hover:bg-sky-600 transition hover:text-white cursor-pointer
-            "
-            >
-              Resume
-            </a>
-          </div>
+          <ResumeBtn/>
         </div>
 
         {/* Right Side items */}
