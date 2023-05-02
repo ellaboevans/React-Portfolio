@@ -41,13 +41,15 @@ function Home() {
           {/* Social Icons */}
 
           {socialItems.map((item) => (
-            <Link
+            <a
               key={item.id}
+              target="_blank"
+              rel="noreferrer noopener"
               to={item.link}
               className="dark:hover:bg-sky-600 items-center flex p-2 rounded-full cursor-pointer hover:translate-x-2 hover:bg-red-500 duration-500 ease"
             >
               <ion-icon name={item.name} title={item.name}></ion-icon>
-            </Link>
+            </a>
           ))}
 
           <div className="h-11 w-[2px] dark:bg-slate-400 bg-slate-800"></div>

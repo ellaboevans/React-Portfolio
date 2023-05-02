@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { socialItems } from "../../data";
-import { Link } from "react-router-dom";
 import ResumeBtn from "../components/ResumeBtn";
 import createClient from "../client";
 import SkeletonAbout from "../skeletons/SkeletonAbout";
@@ -57,13 +56,15 @@ function AboutSection() {
               <p className="text-[14px]">{result.role}</p>
               <div className="space-x-3 flex text-slate-800 dark:text-gray-200 justify-center items-center my-4 ">
                 {socialItems.map((item) => (
-                  <Link
-                    to={item.link}
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     key={item.id}
                     className="items-center hover:animate-bounce"
                   >
                     <ion-icon name={item.name} class="text-[20px]"></ion-icon>
-                  </Link>
+                  </a>
                 ))}
               </div>
               <ResumeBtn />
