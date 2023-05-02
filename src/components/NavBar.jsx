@@ -76,13 +76,13 @@ function NavBar() {
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItem.map((item) => (
-              <Link
+              <NavLink
                 to={item.link}
                 className="hover:text-sky-600 transition duration-300"
                 key={item.id}
               >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </div>
 
