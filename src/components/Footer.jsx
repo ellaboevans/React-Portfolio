@@ -17,7 +17,7 @@ function Footer() {
         <p className="my-2 dark:text-white">© {year} All Right Reserved.</p>
         <div className="space-x-3 items-center">
           <Link
-            to="#"
+            to="/team"
             className="dark:text-gray-400 dark:hover:text-white  duration-100"
           >
             Team
