@@ -28,9 +28,9 @@ function Home() {
 
   return (
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100">
-      {/* <Helmet>
+      <Helmet>
         <title>Evans Elabo - Home</title>
-      </Helmet> */}
+      </Helmet>
       <NavBar />
       <div className="  flex items-center px-4 md:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:my-0">
         {/* Left Side Items */}
