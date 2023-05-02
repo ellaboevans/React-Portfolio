@@ -53,6 +53,11 @@ function NavBar() {
   });
 
   const [isOpen, setIsOpen] = useState(false);
+  const [navItem, setNavItem] = useState([]);
+
+  useEffect(() => {
+    setNavItem(navItems);
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -70,7 +75,7 @@ function NavBar() {
         <div className="hidden md:flex  items-center justify-between space-x-3">
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
-            {navItems.map((item) => (
+            {navItem.map((item) => (
               <NavLink
                 to={item.link}
                 className="hover:text-sky-600 transition duration-300"
