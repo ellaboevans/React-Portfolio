@@ -94,7 +94,7 @@ function BootCampItems() {
         </h1>
         <p className="dark:text-gray-500 text-center md:text-left text-slate-400 w-full">
           Ignite your passion for learning by joining our{" "}
-          <strong className="text-slate-600">
+          <strong className="text-slate-600 dark:text-gray-300">
             free skill-building bootcamps
           </strong>
           . Embrace the opportunity to expand your knowledge and unlock new
