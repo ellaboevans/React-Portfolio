@@ -26,6 +26,7 @@ function Form() {
         (result) => {
           console.log("SUCCESS!", result.text);
           setMessageStatus("SUCCESS!");
+          
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -63,7 +64,7 @@ function Form() {
                 htmlFor="fullName"
                 className=" font-semibold text-[22px] text-slate-700 dark:text-gray-200"
               >
-                Full Name
+                Full Name:
               </label>
               <input
                 type="text"
@@ -81,7 +82,7 @@ function Form() {
                 htmlFor="email"
                 className=" font-semibold text-[22px] text-slate-700 dark:text-gray-200 "
               >
-                Email
+                Email:
               </label>
               <input
                 type="email"
@@ -95,12 +96,12 @@ function Form() {
               />
             </div>
           </div>
-          <div className="flex flex-col my-5">
+          <div className="flex flex-col mt-8">
             <label
               htmlFor="message"
               className="font-semibold text-[22px] text-slate-700 dark:text-gray-200"
             >
-              Message
+              Message:
             </label>
             <textarea
               name="message"
@@ -108,7 +109,7 @@ function Form() {
               value={message}
               onChange={(e) => console.log(setMessage(e.target.value))}
               placeholder="Send us a message"
-              className=" dark:text-white bg-transparent  dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200"
+              className=" dark:text-white bg-transparent h-44 dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200"
               required
             />
           </div>
