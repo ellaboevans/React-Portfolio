@@ -14,9 +14,9 @@ function Form() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setFullName(" ");
-    setEmail(" ");
-    setMessage(" ");
+    setFullName("");
+    setEmail("");
+    setMessage("");
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
       (result) => {
