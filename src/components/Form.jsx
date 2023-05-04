@@ -8,9 +8,9 @@ function Form() {
 
   const form = useRef();
 
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  // const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  // const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  // const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,15 +18,17 @@ function Form() {
     setEmail("");
     setMessage("");
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        console.log("Message Sent Successfully");
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    emailjs
+      .sendForm("service_yj8engh", "template_7fbsi74", form.current, "R2vLvp-Ly5WWeMWEw")
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message Sent Successfully");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
