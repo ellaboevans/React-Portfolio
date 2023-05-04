@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Project from "../components/Project";
 import Service from "../components/Service";
 import ResumeBtn from "../components/ResumeBtn";
+import Form from "../components/Form";
 
 // Greeting based on time of day
 const time = new Date().getHours();
@@ -90,6 +91,7 @@ function Home() {
       <LogoSlider />
       <Service />
       <Project />
+      <Form />
       <Footer />
     </div>
   );
