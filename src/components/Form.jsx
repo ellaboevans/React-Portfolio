@@ -1,16 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Form() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [messageStatus, setMessageStatus] = useState("");
 
   const form = useRef();
-
-  // const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-  // const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  // const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,17 +16,30 @@ function Form() {
     setMessage("");
 
     emailjs
-      .sendForm("service_yj8engh", "template_7fbsi74", form.current, "R2vLvp-Ly5WWeMWEw")
+      .sendForm(
+        "service_yj8engh",
+        "template_7fbsi74",
+        form.current,
+        "R2vLvp-Ly5WWeMWEw"
+      )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("Message Sent Successfully");
+          console.log("SUCCESS!", result.text);
+          setMessageStatus("SUCCESS!");
         },
         (error) => {
-          console.log(error.text);
+          console.log("FAILED...", error.text);
         }
       );
   };
+
+  useEffect(() => {
+    if (messageStatus === "SUCCESS!") {
+      setTimeout(() => {
+        setMessageStatus("");
+      }, 4000);
+    }
+  }, [messageStatus]);
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
@@ -42,6 +52,11 @@ function Form() {
           Let's Get In Touch
         </h2>
         <div className="flex flex-col mx-auto  md:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2">
+          {messageStatus && (
+            <div className="px-4 py-3  rounded leading-normal text-center dark:text-white font-semibold my-3 duration-100 animate-bounce bg-sky-600 text-gray-200">
+              <h1>Your Message Has Been Sent Successfully!</h1>
+            </div>
+          )}
           <div className="flex flex-col md:flex-row  gap-14 items-stretch my-4 ">
             <div className="flex justify-center flex-col w-full">
               <label
