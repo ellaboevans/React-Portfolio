@@ -82,9 +82,9 @@ function BootCampItems() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100 ">
-      <div className="md:px-24 pl-14 mt-10 md:w-2/4 ">
-        <h1 className="dark:text-gray-200 uppercase text-slate-700 text-[30px] font-semibold">
-          CODE WITH CONCEPT
+      <div className="md:px-24  mt-10 md:w-2/4 ">
+        <h1 className="dark:text-gray-200 md:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
+          CODE WITH CONCEPT🚀
         </h1>
         <p className="dark:text-gray-500 text-center md:text-left text-slate-400 w-full">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
