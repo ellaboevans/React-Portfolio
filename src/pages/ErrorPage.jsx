@@ -2,10 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 function ErrorPage() {
   return (
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
+      <Helmet>
+        <title>Evans Elabo - Page Not Found</title>
+      </Helmet>
       <NavBar />
       <div className="flex flex-col items-center justify-center mt-11 md:mt-0 space-y-4">
         <p className="font-bold text-[120px] md:text-[200px] text-gray-600 dark:text-white tracking-widest">
