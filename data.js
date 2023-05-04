@@ -16,8 +16,8 @@ export const navItems = [
   },
   {
     id: 4,
-    name: "Mentorship",
-    link: "/mentorship",
+    name: "Free Bootcamps",
+    link: "/bootcamp",
   },
 ];
 
