@@ -42,12 +42,15 @@ function ProjectPortfolio() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
-      <div className="flex justify-evenly items-center">
-        <div className="hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
-        <p className="dark:text-gray-200 uppercase text-slate-700 text-[22px] font-semibold">
-          Some of my latest work
+      <div className="md:px-24 px-8 mt-10 md:w-2/4 ">
+        <h1 className="dark:text-gray-200 md:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
+          Projects🚀
+        </h1>
+        <p className="dark:text-gray-500 text-center md:text-left text-slate-400 w-full">
+          Explore my captivating portfolio and witness the evolution of my
+          skills and expertise. Delve into a collection of projects that
+          exemplify my dedication, creativity, and growth.
         </p>
-        <div className=" hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-4">
         {/* Card Components */}
