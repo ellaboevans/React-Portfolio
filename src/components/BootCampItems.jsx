@@ -8,6 +8,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -20,6 +21,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -32,6 +34,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -43,6 +46,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -54,6 +58,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -65,6 +70,7 @@ function BootCampItems() {
       image:
         "https://pbs.twimg.com/media/FASXUTCXEAMQvwb?format=jpg&name=medium",
       title: "Adobe Photoshop Training",
+      instructor: "Evans Elabo",
       date: "Oct 14, 2021",
       time: "16:00 GMT",
       link: "/bootcamp/form",
@@ -87,9 +93,12 @@ function BootCampItems() {
           CODE WITH CONCEPT🚀
         </h1>
         <p className="dark:text-gray-500 text-center md:text-left text-slate-400 w-full">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          sequi voluptatibus accusamus aliquam cumque atque officia odio quidem
-          molestias reiciendis!
+          Ignite your passion for learning by joining our{" "}
+          <strong className="text-slate-600">
+            free skill-building bootcamps
+          </strong>
+          . Embrace the opportunity to expand your knowledge and unlock new
+          horizons.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-10">
@@ -115,14 +124,23 @@ function BootCampItems() {
             <p className="text-gray-400 mb-3 leading-normal">
               {bootCamp.description}
             </p>
-            <a
-              href={bootCamp.link}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-gray-100 float-right p-2 bg-sky-600 text-gray-100 font-semibold text-sm  duration-300 uppercase"
-            >
-              Register
-            </a>
+            <div className="flex items-center  ">
+              <p className="text-gray-400 leading-normal flex-1">
+                By:{" "}
+                <span className="text-sky-700 font-bold">
+                  {" "}
+                  {bootCamp.instructor}
+                </span>
+              </p>
+              <a
+                href={bootCamp.link}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="float-right p-2 bg-sky-600 text-gray-100 font-semibold text-sm  duration-300 uppercase"
+              >
+                Register
+              </a>
+            </div>
           </div>
         ))}
       </div>
