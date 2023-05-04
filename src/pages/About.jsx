@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
-
 import AboutSection from "../components/AboutSection";
+import Form from "../components/Form";
 
 function About() {
   return (
@@ -13,6 +13,7 @@ function About() {
       </Helmet>
       <NavBar />
       <AboutSection />
+      <Form />
       <Footer />
     </div>
   );
