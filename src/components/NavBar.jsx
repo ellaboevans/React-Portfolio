@@ -64,7 +64,7 @@ function NavBar() {
   };
 
   return (
-    <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 md:px-36 dark:text-white overflow-hidden">
+    <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 lg:px-36 dark:text-white overflow-hidden">
       <div className="flex justify-between  md:justify-between items-center">
         <NavLink
           to="/"
@@ -72,7 +72,7 @@ function NavBar() {
         >
           CodeConcept 🇬🇭
         </NavLink>
-        <div className="hidden md:flex  items-center justify-between space-x-3">
+        <div className="hidden lg:flex  items-center justify-between space-x-3">
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItem.map((item) => (
@@ -114,7 +114,7 @@ function NavBar() {
           ))}
         </div>
         <div
-          className=" md:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
+          className=" lg:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
           onClick={handleToggle}
         >
           <FontAwesomeIcon icon={faBars} />

@@ -33,10 +33,10 @@ function Home() {
         <title>Evans Elabo - Home</title>
       </Helmet>
       <NavBar />
-      <div className="  flex items-center px-4 md:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:my-0">
+      <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 lg:my-0">
         {/* Left Side Items */}
 
-        <div className=" hidden md:flex items-center dark:text-gray-100 flex-col space-y-3 mt-28 md:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">
+        <div className=" hidden md:flex items-center dark:text-gray-100 flex-col space-y-3 mt-28 lg:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">
           <div className="h-11 w-[2px] dark:bg-slate-400 bg-slate-800"></div>
 
           {/* Social Icons */}
@@ -64,12 +64,12 @@ function Home() {
               {clock}
             </p>
           </div>
-          <div className="dark:text-white text-gray-800 md:px-0">
-            <h1 className="font- text-[18px] text-center">{greeting} I'm</h1>
-            <h2 className="font-bold text-[40px] my-2 md:text-[65px] text-center uppercase">
-              Evans Elabo ✨
+          <div className="dark:text-white  text-gray-800 lg:px-0">
+            <h1 className=" text-[18px] text-center">{greeting} I'm</h1>
+            <h2 className="font-bold text-[40px] my-2 lg:text-[65px] text-center uppercase">
+              Evans Elabo <span className="">✨</span>
             </h2>
-            <p className="text-center md:px-80 dark:text-slate-400">
+            <p className="text-center lg:px-80 mb-4 dark:text-slate-400">
               I am a student and self-taught software developer specialized in
               Mobile App Development & Frontend Web Development. I also teach
               and mentor in the field of Web Programming, Graphics Design &
@@ -81,7 +81,7 @@ function Home() {
 
         {/* Right Side items */}
 
-        <div className="hidden md:flex items-center flex-col space-y-10 mt-24 md:mt-0 px-3 animate-[bounce_4s_infinite]">
+        <div className="hidden md:flex items-center flex-col space-y-10 mt-24 lg:mt-0 px-3 animate-[bounce_4s_infinite]">
           <div className="h-11 w-[2px] dark:bg-slate-400 bg-slate-800"></div>
           <p className="rotate-90 dark:text-slate-400  ">concept</p>
 
