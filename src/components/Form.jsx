@@ -109,7 +109,7 @@ function Form() {
               value={message}
               onChange={(e) => console.log(setMessage(e.target.value))}
               placeholder="Send us a message"
-              className=" dark:text-white bg-transparent h-44 dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200"
+              className="resize-none dark:text-white bg-transparent h-44 dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200"
               required
             />
           </div>
