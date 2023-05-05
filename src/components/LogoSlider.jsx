@@ -73,7 +73,7 @@ function LogoSlider() {
     centerPadding: "200px",
   };
   return (
-    <section className=" w-screen bg-gray-200  dark:bg-slate-700 md:-mt-14 -mt-10 mb-11 md:py-2 duration-100">
+    <section className=" w-screen bg-gray-200  dark:bg-slate-700 md:-mt-24 lg:-mt-14 -mt-10 mb-11 md:py-2 duration-100">
       <div className="hidden md:flex">
         {!sliderData &&
           [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => <SkeletonSlider key={n} />)}
@@ -86,7 +86,7 @@ function LogoSlider() {
                 <img
                   src={slider.sliderImage?.asset.url}
                   alt={slider.title}
-                  className="md:h-24"
+                  className="md:h-16 lg:h-24"
                 />
               </div>
             ))}

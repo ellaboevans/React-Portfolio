@@ -39,13 +39,13 @@ function Service() {
   return (
     <section className="w-screen py-8 dark:bg-slate-800">
       <div className="flex justify-evenly items-center">
-        <div className="hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
-        <p className="dark:text-gray-200 uppercase text-slate-700 text-[22px] font-semibold">
+        <div className="hidden md:block h-[2px] md:w-4/12 w-96 dark:bg-slate-400 bg-slate-800"></div>
+        <p className="dark:text-gray-200 text-center uppercase text-slate-700 text-[22px] font-semibold">
           what i actually do
         </p>
-        <div className=" hidden md:block h-[2px] w-96 dark:bg-slate-400 bg-slate-800"></div>
+        <div className=" hidden md:block h-[2px] md:w-4/12 w-96 dark:bg-slate-400 bg-slate-800"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-4">
         {/* Card Components */}
         {skillsData &&
           skillsData.map((skill, index) => (
