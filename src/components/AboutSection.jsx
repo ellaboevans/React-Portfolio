@@ -38,23 +38,23 @@ function AboutSection() {
   //   console.log(aboutData);
 
   return (
-    <section className="flex flex-col items-center space-y-8 md:space-y-0  md:flex-row md:items-start md:space-x-14 justify-between p-20 ">
+    <section className="flex flex-col items-center space-y-8 md:space-y-0  md:flex-row md:items-start md:space-x-4 lg:space-x-14 justify-between md:px-10 p-20 ">
       {!aboutData && <SkeletonAbout />}
       {aboutData &&
         aboutData.map((result, index) => (
           <div
             key={index}
-            className="w-72 bg-gray-100 shadow-md dark:bg-slate-600 rounded-t-md dark:text-gray-200 p-1"
+            className="md:w-2/4 bg-gray-100 shadow-md dark:bg-slate-600 rounded-t-md dark:text-gray-200 p-1"
           >
             <img
               src={result.authorImage?.asset.url}
               alt={result.title}
-              className="w-full h-60 rounded-t-md object-cover"
+              className="w-full h-60 lg:h-60 md:h-[190px] rounded-t-md object-cover"
             />
-            <div className="text-center text-slate-800 dark:text-gray-200 my-2">
-              <p className="font-bold text-[23px]">{result.title}</p>
+            <div className="text-center text-slate-800 dark:text-gray-200 my-1">
+              <p className="font-bold text-[28px]">{result.title}</p>
               <p className="text-[14px]">{result.role}</p>
-              <div className="space-x-3 flex text-slate-800 dark:text-gray-200 justify-center items-center my-4 ">
+              <div className="space-x-3 flex text-slate-800 dark:text-gray-200 justify-center items-center my-4 md:my-1 ">
                 {socialItems.map((item) => (
                   <a
                     href={item.link}
@@ -72,7 +72,7 @@ function AboutSection() {
           </div>
         ))}
 
-      <div className="bg-gray-100 text-slate-800 dark:bg-slate-600 md:w-[950px] w-[400px] rounded-t-md shadow-lg p-4 ">
+      <div className="bg-gray-100 text-slate-800 dark:bg-slate-600 md:w-[700px] lg:w-[950px] w-[400px] rounded-t-md shadow-lg p-4 ">
         <h2 className="font-bold text-right my-3 text-3xl dark:text-gray-200 text-slate-800">
           My Story
         </h2>
