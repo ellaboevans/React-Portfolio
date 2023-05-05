@@ -45,7 +45,7 @@ function Service() {
         </p>
         <div className=" hidden md:block h-[2px] md:w-4/12 w-96 dark:bg-slate-400 bg-slate-800"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 xl:px-24 py-6 gap-4">
         {/* Card Components */}
         {skillsData &&
           skillsData.map((skill, index) => (

@@ -69,7 +69,7 @@ function Home() {
             <h2 className="font-bold text-[40px] my-2 lg:text-[65px] text-center uppercase">
               Evans Elabo <span className="">✨</span>
             </h2>
-            <p className="text-center lg:px-80 mb-4 dark:text-slate-400">
+            <p className="text-center xl:px-80 mb-4 dark:text-slate-400">
               I am a student and self-taught software developer specialized in
               Mobile App Development & Frontend Web Development. I also teach
               and mentor in the field of Web Programming, Graphics Design &
