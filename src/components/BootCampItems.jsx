@@ -37,11 +37,11 @@ function BootCampItems() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100 ">
-      <div className="md:px-24 px-8 mt-10 md:w-2/4 ">
-        <h1 className="dark:text-gray-200 md:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
+      <div className="lg:px-24 px-8 mt-10 lg:w-2/4 ">
+        <h1 className="dark:text-gray-200 lg:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
           CODE WITH CONCEPT🚀
         </h1>
-        <p className="dark:text-gray-500 text-center md:text-left text-slate-400 w-full">
+        <p className="dark:text-gray-500 text-center lg:text-left text-slate-400 w-full">
           Ignite your passion for learning by joining our{" "}
           <strong className="text-slate-600 dark:text-gray-300">
             free skill-building bootcamps
@@ -50,13 +50,13 @@ function BootCampItems() {
           horizons.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-10">
         {!bootCamps &&
           [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
         {bootCamps &&
           bootCamps.map((bootCamp, index) => (
             <div
-              className=" md:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
+              className=" lg:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
               key={index}
             >
               <div>
