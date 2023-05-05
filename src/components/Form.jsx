@@ -116,7 +116,7 @@ function Form() {
           <input
             type="submit"
             value="Reach Out to Us"
-            className="dark:text-white text-[18px] text-slate-700 font-semibold bg-gray-300 outline-slate-800 outline outline-1 hover:outline-none dark:outline-gray-200 hover:outline-0 shadow-lg dark:bg-slate-700 w-full py-2 px-4 mt-2 dark:hover:bg-slate-500 rounded-md hover:bg-sky-600 transition hover:text-white cursor-pointer
+            className="rounded-md dark:text-white text-[18px] text-slate-700 font-semibold bg-gray-300 outline-slate-800 outline outline-1 hover:outline-none dark:outline-gray-200 hover:outline-0 shadow-lg dark:bg-slate-700 w-full py-2 px-4 mt-2 dark:hover:bg-slate-500 hover:bg-sky-600 transition hover:text-white cursor-pointer
             "
           />
         </div>
