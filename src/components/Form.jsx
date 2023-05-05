@@ -52,7 +52,7 @@ function Form() {
         <h2 className="text-center dark:text-gray-100 uppercase font-bold text-[22px] my-8 ">
           Let's Get In Touch
         </h2>
-        <div className="flex flex-col mx-auto  md:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2">
+        <div className="flex flex-col mx-auto  lg:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2">
           {messageStatus && (
             <div className="px-4 py-3  rounded leading-normal text-center dark:text-white font-semibold my-3 duration-100 animate-bounce bg-sky-600 text-gray-200">
               <h1>Your Message Has Been Sent Successfully!🚀</h1>
