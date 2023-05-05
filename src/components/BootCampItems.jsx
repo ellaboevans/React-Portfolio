@@ -51,10 +51,8 @@ function BootCampItems() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 items-center  md:px-24 py-6 gap-10">
-        <div className="md:px-0 px-12">
           {!bootCamps &&
             [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
-        </div>
         {bootCamps &&
           bootCamps.map((bootCamp, index) => (
             <div
