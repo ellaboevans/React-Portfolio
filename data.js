@@ -11,8 +11,8 @@ export const navItems = [
   },
   {
     id: 3,
-    name: "Portfolio",
-    link: "/portfolio",
+    name: "Project",
+    link: "/project",
   },
   {
     id: 4,

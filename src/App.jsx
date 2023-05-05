@@ -2,7 +2,7 @@ import React from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
+import Project from "./pages/Project";
 import BootCamp from "./pages/BootCamp";
 import ErrorPage from "./pages/ErrorPage";
 import Team from "./pages/Team";
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route Component={Home} path="/" exact />
           <Route Component={About} path="/about" />
-          <Route Component={Portfolio} path="/portfolio" />
+          <Route Component={Project} path="/project" />
           <Route Component={BootCamp} path="/bootcamp" />
           <Route Component={Team} path="/team" />
           <Route Component={ErrorPage} path="*" />
