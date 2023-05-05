@@ -65,7 +65,7 @@ function NavBar() {
 
   return (
     <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 lg:px-36 dark:text-white overflow-hidden">
-      <div className="flex justify-between  md:justify-between items-center">
+      <div className="flex justify-between my-4  md:justify-between items-center">
         <NavLink
           to="/"
           className="text-[20px] text-gray-800 dark:text-white font-semibold mt-8 md:mt-0"
@@ -114,7 +114,7 @@ function NavBar() {
           ))}
         </div>
         <div
-          className=" lg:hidden dark:border-white py-1 mt-8 px-3 dark:border rounded cursor-pointer"
+          className=" lg:hidden dark:border-white py-1  px-3 dark:border rounded cursor-pointer"
           onClick={handleToggle}
         >
           <FontAwesomeIcon icon={faBars} />
