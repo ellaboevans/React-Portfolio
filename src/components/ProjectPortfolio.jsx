@@ -42,17 +42,17 @@ function ProjectPortfolio() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
-      <div className="lg:px-24 px-8 md:px-14 mt-10 lg:w-2/4 ">
-        <h1 className="dark:text-gray-200 lg:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
+      <div className="xl:px-24 px-8 md:px-14 mt-10 xl:w-2/4 ">
+        <h1 className="dark:text-gray-200 xl:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
           Projects🚀
         </h1>
-        <p className="dark:text-gray-500 text-center lg:text-left text-slate-400 w-full">
+        <p className="dark:text-gray-500 text-center xl:text-left text-slate-400 w-full">
           Explore my captivating portfolio and witness the evolution of my
           skills and expertise. Delve into a collection of projects that
           exemplify my dedication, creativity, and growth.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-4">
         {/* Card Components */}
         {!projectData &&
           [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
