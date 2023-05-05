@@ -50,13 +50,13 @@ function BootCampItems() {
           horizons.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center  md:px-24 py-6 gap-10">
-          {!bootCamps &&
-            [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center px-12 md:px-24 py-6 gap-10">
+        {!bootCamps &&
+          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
         {bootCamps &&
           bootCamps.map((bootCamp, index) => (
             <div
-              className=" md:w-[380px] w-[330px] mx-auto p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
+              className=" md:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
               key={index}
             >
               <div>
