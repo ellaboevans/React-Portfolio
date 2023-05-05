@@ -33,7 +33,7 @@ function Home() {
         <title>Evans Elabo - Home</title>
       </Helmet>
       <NavBar />
-      <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 lg:my-0">
+      <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:-my-8 lg:my-0">
         {/* Left Side Items */}
 
         <div className=" hidden md:flex items-center dark:text-gray-100 flex-col space-y-3 mt-28 lg:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">
