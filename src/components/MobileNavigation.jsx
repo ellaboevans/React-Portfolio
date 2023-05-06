@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 function MobileNavigation() {
   return (
-    <div className="lg:hidden">
-      <div className="w-full bg-gray-100 text-gray-600 dark:bg-white absolute top-24 left-0 dark:text-slate-700 flex flex-col items-center justify-start p-4 shadow-md">
+    <div className="lg:hidden ">
+      <div className="w-full bg-gray-100 text-gray-600 dark:bg-white absolute top-24 left-0 dark:text-slate-700 flex flex-col items-center justify-start p-4 shadow-md z-10">
         {navItems.map((item) => (
           <Link
             to={item.link}
