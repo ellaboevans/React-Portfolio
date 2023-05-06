@@ -59,7 +59,7 @@ function BootCampItems() {
               className=" lg:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
               key={index}
             >
-              <div>
+              <div className="">
                 <img
                   src={
                     bootCamp.bootcampImage?.asset.url
@@ -67,7 +67,7 @@ function BootCampItems() {
                       : "https://t4.ftcdn.net/jpg/03/56/02/11/240_F_356021129_xu10B4UK64NAxI17YyXq3MRiKIV0R93E.jpg"
                   }
                   alt={bootCamp.title}
-                  className=" h-full object-cover  rounded"
+                  className="w-full h-full object-cover  rounded"
                 />
               </div>
               <div className="mt-2 ">
