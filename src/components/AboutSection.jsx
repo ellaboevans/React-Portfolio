@@ -44,7 +44,7 @@ function AboutSection() {
         aboutData.map((result, index) => (
           <div
             key={index}
-            className="md:w-2/4 bg-gray-100 shadow-md dark:bg-slate-600 rounded-t-md dark:text-gray-200 p-1"
+            className="w-72 lg:w-72 md:w-2/4 bg-gray-100 shadow-md dark:bg-slate-600 rounded-t-md dark:text-gray-200 p-1"
           >
             <img
               src={result.authorImage?.asset.url}
