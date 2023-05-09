@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import createClient from "../client";
-import SkeletonElement from "../skeletons/SkeletonElement";
 import SkeletonService from "../skeletons/SkeletonService";
-
 
 function Service() {
   const [skillsData, setSkillsData] = useState(null);
@@ -29,13 +27,14 @@ function Service() {
         console.error("Error fetching skills data:", error);
       }
     };
-    const timer = setTimeout(()=>{
-      fetchData()
-    },2000)
+    const timer = setTimeout(() => {
+      fetchData();
+    }, 2000);
 
-      return () => clearTimeout(timer);
+    return () => clearTimeout(timer);
   }, []);
 
+  
   return (
     <section className="w-screen py-8 dark:bg-slate-800">
       <div className="flex justify-evenly items-center">

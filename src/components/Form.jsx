@@ -26,7 +26,6 @@ function Form() {
         (result) => {
           console.log("SUCCESS!", result.text);
           setMessageStatus("SUCCESS!");
-          
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -42,6 +41,7 @@ function Form() {
     }
   }, [messageStatus]);
 
+  
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
       <form
@@ -52,7 +52,9 @@ function Form() {
         <h2 className="text-center dark:text-gray-100 uppercase font-bold text-[22px] my-8 ">
           Let's Get In Touch
         </h2>
-        <div className="flex flex-col mx-auto  lg:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2">
+        <div
+          className="flex flex-col mx-auto  lg:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2"
+        >
           {messageStatus && (
             <div className="px-4 py-3  rounded leading-normal text-center dark:text-white font-semibold my-3 duration-100 animate-bounce bg-sky-600 text-gray-200">
               <h1>Your Message Has Been Sent Successfully!🚀</h1>
@@ -72,7 +74,7 @@ function Form() {
                 id="fullName"
                 value={fullName}
                 onChange={(e) => console.log(setFullName(e.target.value))}
-                placeholder="Enter your full name"
+                placeholder="e.g John Doe"
                 className="py-2 dark:text-white bg-transparent dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200 "
                 required
               />
@@ -90,7 +92,7 @@ function Form() {
                 id="email"
                 value={email}
                 onChange={(e) => console.log(setEmail(e.target.value))}
-                placeholder="Enter your email address"
+                placeholder="e.g info@codeconcept.tech  "
                 className="py-2 dark:text-white bg-transparent  dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500   dark:border-slate-200"
                 required
               />
@@ -108,7 +110,7 @@ function Form() {
               id="message"
               value={message}
               onChange={(e) => console.log(setMessage(e.target.value))}
-              placeholder="Send us a message"
+              placeholder="Hey! Kindly send us a message"
               className="resize-none dark:text-white bg-transparent h-44 dark:bg-transparent border-0 border-b-2 focus:outline-none border-slate-500  dark:border-slate-200"
               required
             />
