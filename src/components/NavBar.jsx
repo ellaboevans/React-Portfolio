@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
 import { navItems, options } from "../../data";
 import MobileNavigation from "./MobileNavigation";
 
@@ -53,7 +53,7 @@ function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [navItem, setNavItem] = useState([]);
-  const [isActive, setIsActive] = useState("Home");
+  // const [isActive, setIsActive] = useState("Home");
 
   useEffect(() => {
     setNavItem(navItems);
@@ -66,27 +66,19 @@ function NavBar() {
   return (
     <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 xl:px-36 dark:text-white overflow-hidden">
       <div className="flex justify-between my-4  md:justify-between items-center">
-        <NavLink
-          to="/"
+        <a
+          href="/"
           className="text-[20px] text-gray-800 dark:text-white font-semibold mt-8 md:mt-0"
         >
           CodeConcept 🇬🇭
-        </NavLink>
+        </a>
         <div className="hidden lg:flex  items-center justify-between space-x-3">
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItem.map((item) => (
-              <NavLink
-                key={item.id}
-                to={item.link}
-                className={` transition duration-300 ${
-                  isActive === item.name &&
-                  "py-2 px-2 dark:bg-slate-400 bg-gray-200 rounded"
-                }`}
-                onClick={() => setIsActive(item.name)}
-              >
+              <CustomLink to={item.link} key={item.id}>
                 {item.name}
-              </NavLink>
+              </CustomLink>
             ))}
           </div>
 
@@ -129,4 +121,18 @@ function NavBar() {
   );
 }
 
+const CustomLink = ({ to, children, ...props }) => {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  return (
+    <div className={`${isActive === to && "active"}`}>
+      <NavLink to={to} {...props}>
+        {children}
+      </NavLink>
+    </div>
+  );
+};
+
 export default NavBar;
+
+// py-2 px-2 dark:bg-slate-400 bg-gray-200 rounded
