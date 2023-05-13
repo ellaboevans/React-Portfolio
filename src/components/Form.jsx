@@ -9,6 +9,7 @@ function Form() {
 
   const form = useRef();
 
+
   const sendEmail = (e) => {
     e.preventDefault();
     setFullName("");
@@ -41,7 +42,6 @@ function Form() {
     }
   }, [messageStatus]);
 
-  
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
       <form
@@ -52,9 +52,7 @@ function Form() {
         <h2 className="text-center dark:text-gray-100 uppercase font-bold text-[22px] my-8 ">
           Let's Get In Touch
         </h2>
-        <div
-          className="flex flex-col mx-auto  lg:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2"
-        >
+        <div className="flex flex-col mx-auto  lg:w-[800px] bg-gray-200 dark:bg-slate-700 rounded  p-2">
           {messageStatus && (
             <div className="px-4 py-3  rounded leading-normal text-center dark:text-white font-semibold my-3 duration-100 animate-bounce bg-sky-600 text-gray-200">
               <h1>Your Message Has Been Sent Successfully!🚀</h1>
@@ -120,6 +118,7 @@ function Form() {
             value="Reach Out to Us"
             className="rounded-md dark:text-white text-[18px] text-slate-700 font-semibold bg-gray-300 outline-slate-800 outline outline-1 hover:outline-none dark:outline-gray-200 hover:outline-0 shadow-lg dark:bg-slate-700 w-full py-2 px-4 mt-2 dark:hover:bg-slate-500 hover:bg-sky-600 transition hover:text-white cursor-pointer
             "
+            disabled={!email}
           />
         </div>
       </form>
