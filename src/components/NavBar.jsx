@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-
 import { navItems, options } from "../../data";
 import MobileNavigation from "./MobileNavigation";
 
@@ -54,6 +53,7 @@ function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [navItem, setNavItem] = useState([]);
+  const [isActive, setIsActive] = useState("Home");
 
   useEffect(() => {
     setNavItem(navItems);
@@ -77,9 +77,13 @@ function NavBar() {
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItem.map((item) => (
               <NavLink
-                to={item.link}
-                className="hover:text-sky-600 transition duration-300"
                 key={item.id}
+                to={item.link}
+                className={` transition duration-300 ${
+                  isActive === item.name &&
+                  "py-2 px-2 dark:bg-slate-400 bg-gray-200 rounded"
+                }`}
+                onClick={() => setIsActive(item.name)}
               >
                 {item.name}
               </NavLink>
