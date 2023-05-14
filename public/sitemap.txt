@@ -1,5 +1,5 @@
 https://codeconcept.vercel.app/
 https://codeconcept.vercel.app/about
-https://codeconcept.vercel.app/bootcamp
-https://codeconcept.vercel.app/portfolio
 https://codeconcept.vercel.app/project
+https://codeconcept.vercel.app/bootcamp
+https://codeconcept.vercel.app/team
