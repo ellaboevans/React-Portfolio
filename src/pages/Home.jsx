@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { socialItems } from "../../data";
 import NavBar from "../components/NavBar";
@@ -31,6 +31,11 @@ function Home() {
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100">
       <Helmet>
         <title>Evans Elabo - Home</title>
+        <meta
+          name="description"
+          content="Looking for a creative product designer and frontend web developer? Look no further than Evans Elabo!"
+        />
+        <link rel="canonical" href="/" />
       </Helmet>
       <NavBar />
       <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:-my-8 lg:my-0">

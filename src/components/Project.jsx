@@ -58,6 +58,8 @@ function Project() {
                     src={project.projectImage?.asset.url}
                     alt={project.title}
                     className="w-[100%] h-[200px] object-cover rounded"
+                    width="auto"
+                    height="auto"
                   />
                 </div>
                 <div className="flex items-center mt-2 ">

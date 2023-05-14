@@ -87,6 +87,8 @@ function LogoSlider() {
                   src={slider.sliderImage?.asset.url}
                   alt={slider.title}
                   className="md:h-16 lg:h-24"
+                  width="auto"
+                  height="auto"
                 />
               </div>
             ))}
@@ -100,6 +102,8 @@ function LogoSlider() {
                 src={stack.stackImage?.asset.url}
                 alt={stack.title}
                 className="w-44 p-3"
+                width="auto"
+                height="auto"
               />
             </div>
           ))}

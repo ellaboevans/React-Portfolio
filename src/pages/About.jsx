@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import AboutSection from "../components/AboutSection";
 import Form from "../components/Form";
@@ -10,6 +10,11 @@ function About() {
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
       <Helmet>
         <title>Evans Elabo - About</title>
+        <link rel="canonical" href="/about" />
+        <meta
+          name="description"
+          content="Looking for a creative product designer and frontend web developer? Look no further than Evans Elabo!"
+        />
       </Helmet>
       <NavBar />
       <AboutSection />
