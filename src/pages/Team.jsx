@@ -8,6 +8,7 @@ function Team() {
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
       <Helmet>
         <title>codeConcept - Team</title>
+        <link rel="canonical" href="/team" />
       </Helmet>
       <NavBar />
       <div className="font-bold text-[60px] dark:text-white text-center mt-32">
