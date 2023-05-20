@@ -84,7 +84,7 @@ function Project() {
           {!projectData && [1, 2, 3].map((n) => <SkeletonElement key={n} />)}
         </div>
         <div className="w-36 text-center mx-auto items-center">
-          <Link to="/portfolio">
+          <Link to="/project">
             <p
               className="dark:text-white bg-gray-200 dark:bg-slate-700 py-2 px-4 mt-8 dark:hover:bg-slate-500 rounded-md hover:bg-sky-600 transition hover:text-white cursor-pointer
             "
