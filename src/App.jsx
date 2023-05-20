@@ -9,7 +9,7 @@ import Team from "./pages/Team";
 
 function App() {
   return (
-    <div className="dark:bg-slate-800 duration-100">
+    <div className="dark:bg-slate-800 duration-100 ">
       <BrowserRouter>
         <Routes>
           <Route Component={Home} path="/" exact />
