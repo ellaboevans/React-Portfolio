@@ -33,7 +33,7 @@ function Home() {
         <title>Evans Elabo - Home</title>
         <meta
           name="description"
-          content="Looking for a creative product designer and frontend web developer? Look no further than Evans Elabo!"
+          content="I am a student and self-taught software developer specialized in Mobile App Development & Frontend Web Development. I also teach and mentor in the field of Web ..."
         />
         <link rel="canonical" href="/" />
       </Helmet>
