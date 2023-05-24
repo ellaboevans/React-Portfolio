@@ -6,7 +6,7 @@ import BootCampItems from "../components/BootCampItems";
 
 function BootCamp() {
   return (
-    <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
+    <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden scrollbar-thin scrollbar-thumb-sky-600 dark:scrollbar-track-slate-700 scrollbar-track-gray-200 scrollbar-rounded-md">
       <Helmet>
         <title>Evans Elabo - BootCamp</title>
         <link rel="canonical" href="/bootcamp" />

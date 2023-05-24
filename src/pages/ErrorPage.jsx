@@ -6,10 +6,9 @@ import { Helmet } from "react-helmet-async";
 
 function ErrorPage() {
   return (
-    <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden">
+    <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden scrollbar-thin scrollbar-thumb-sky-600 dark:scrollbar-track-slate-700 scrollbar-track-gray-200 scrollbar-rounded-md">
       <Helmet>
         <title>Evans Elabo - Page Not Found</title>
-        
       </Helmet>
       <NavBar />
       <div className="flex flex-col items-center justify-center mt-11 md:mt-0 space-y-4">
