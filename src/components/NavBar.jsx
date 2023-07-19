@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
 import { navItems, options } from "../../data";
-import MobileNavigation from "./MobileNavigation";
+import { motion } from "framer-motion";
 
 function NavBar() {
   const [theme, setTheme] = useState(
@@ -53,14 +53,17 @@ function NavBar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [navItem, setNavItem] = useState([]);
-  // const [isActive, setIsActive] = useState("Home");
 
   useEffect(() => {
     setNavItem(navItems);
   }, []);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
+  const variants = {
+    open: { opacity: 1, y: 0, duration: 5 },
+    closed: {
+      opacity: 0,
+      y: "-100%",
+    },
   };
 
   return (
@@ -111,12 +114,37 @@ function NavBar() {
         </div>
         <div
           className=" lg:hidden dark:border-white py-1  px-3 dark:border rounded cursor-pointer"
-          onClick={handleToggle}
+          onClick={() => setIsOpen((isOpen) => !isOpen)}
         >
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-      {isOpen && <MobileNavigation />}
+      {/* Mobile Menu Starts */}
+      <div className="lg:hidden">
+        <motion.div
+          animate={isOpen ? "open" : "closed"}
+          variants={variants}
+          className="bg-gray-100 text-gray-600 dark:bg-white h-screen absolute dark:text-slate-700 p-10 shadow-md z-10 space-y-4 font-bold right-0 left-0 top-0"
+        >
+          <div
+            className="absolute right-6 top-8 dark:border-white py-1  px-3 dark:border rounded cursor-pointer"
+            onClick={() => setIsOpen((isOpen) => !isOpen)}
+          >
+            <FontAwesomeIcon icon={faClose}/>
+          </div>
+          <div className="flex flex-col items-center my-24 gap-5">
+            {navItems.map((item) => (
+              <CustomLink
+                to={item.link}
+                key={item.id}
+                onClick={() => setIsOpen((isOpen) => !isOpen)}
+              >
+                {item.name}
+              </CustomLink>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </nav>
   );
 }
