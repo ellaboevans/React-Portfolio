@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
-import Loader from "./Loader";
 
 function BootCampItems() {
   const [bootCamps, setBootCamps] = useState(null);
-  const [loading, setIsLoading] = useState(false);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // setIsLoading(true);
         const data = await createClient.fetch(`
         *[_type == "bootcamp"]{
           title,
@@ -27,15 +25,14 @@ function BootCampItems() {
           },
         }
         `);
-        // setIsLoading(false);
         setBootCamps(data);
       } catch (error) {
-        console.log(`Error fetching data: ${error}`);
+        console.log(`Error feetching data: ${error}`);
       }
     };
     const timer = setTimeout(() => {
       fetchData();
-    }, 5000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -55,9 +52,9 @@ function BootCampItems() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-10">
-        {!bootCamps && <Loader />}
-
-        {bootCamps && (
+        {!bootCamps &&
+          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
+        {bootCamps &&
           bootCamps.map((bootCamp, index) => (
             <div
               className=" lg:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
@@ -108,8 +105,7 @@ function BootCampItems() {
                 </a>
               </div>
             </div>
-          ))
-        )}
+          ))}
       </div>
       {/* Pagination */}
       {/* <div className="w-[300px] flex justify-center py-2 items-center mx-auto space-x-6">
