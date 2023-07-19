@@ -4,7 +4,6 @@ import SkeletonElement from "../skeletons/SkeletonElement";
 
 function BootCampItems() {
   const [bootCamps, setBootCamps] = useState(null);
-  
 
   useEffect(() => {
     const fetchData = async () => {

@@ -1,20 +1,15 @@
 import React from "react";
-import { Oval } from "react-loader-spinner";
+import { ThreeCircles } from "react-loader-spinner";
 
 function Loader() {
   return (
-    <div className="flex items-center justify-center">
-      <Oval
-        height={80}
-        width={80}
-        color="#4fa94d"
-        wrapperStyle={{}}
-        wrapperClass=""
+    <div className="flex flex-col items-center justify-center absolute top-0 left-0 right-0 bg-gray-200 z-10 h-screen overflow-hidden">
+      <ThreeCircles
+        height="100"
+        width="100"
+        color="#005475"
         visible={true}
-        ariaLabel="oval-loading"
-        secondaryColor="#4fa94d"
-        strokeWidth={3}
-        strokeWidthSecondary={2}
+        ariaLabel="three-circles-rotating"
       />
     </div>
   );
