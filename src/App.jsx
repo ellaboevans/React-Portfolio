@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
+import {Analytics} from "@vercel/analytics"
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
@@ -27,6 +28,7 @@ function App() {
           <Route Component={ErrorPage} path="*" />
         </Routes>
       </BrowserRouter>
+      <Analytics/>
     </div>
   );
 }
