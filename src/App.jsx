@@ -31,13 +31,4 @@ function App() {
   );
 }
 
-{
-  /* <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/mentorship" element={<Mentorship />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes> */
-}
 export default App;
