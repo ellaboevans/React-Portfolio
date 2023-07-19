@@ -67,11 +67,11 @@ function NavBar() {
   };
 
   return (
-    <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 xl:px-36 dark:text-white overflow-hidden">
+    <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 xl:px-24 dark:text-white overflow-hidden">
       <div className="flex justify-between my-4  md:justify-between items-center">
         <a
           href="/"
-          className="text-[20px] text-gray-800 dark:text-white font-semibold mt-8 md:mt-0"
+          className="text-[20px] text-gray-800 dark:text-white font-semibold"
         >
           CodeConcept 🇬🇭
         </a>
@@ -130,7 +130,7 @@ function NavBar() {
             className="absolute right-6 top-8 dark:border-white py-1  px-3 dark:border rounded cursor-pointer"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           >
-            <FontAwesomeIcon icon={faClose}/>
+            <FontAwesomeIcon icon={faClose} />
           </div>
           <div className="flex flex-col items-center my-24 gap-5">
             {navItems.map((item) => (
