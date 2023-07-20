@@ -85,7 +85,7 @@ function Home() {
                     "Hi, The Name is Evans Elabo",
                     "I'm a Software Developer",
                     "I'm a UI/UX Designer",
-                    "I'm a Graphics Designer",
+                    "And I Code with Gaming Music",
                   ],
                   autoStart: true,
                   loop: true,
