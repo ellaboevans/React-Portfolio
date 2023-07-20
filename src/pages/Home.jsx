@@ -30,7 +30,7 @@ function Home() {
   return (
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100  scrollbar-thin scrollbar-thumb-sky-600 dark:scrollbar-track-slate-700 scrollbar-track-gray-200 scrollbar-rounded-md">
       <Helmet>
-        <title>Evans Elabo - Home</title>
+        <title>Evans Elabo | Home</title>
         <meta
           name="description"
           content="I am a student and self-taught software developer specialized in Mobile App Development & Frontend Web Development. I also teach and mentor in the field of Web ..."
