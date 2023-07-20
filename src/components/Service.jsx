@@ -34,7 +34,6 @@ function Service() {
     return () => clearTimeout(timer);
   }, []);
 
-  
   return (
     <section className="w-screen py-8 dark:bg-slate-800">
       <div className="flex justify-evenly items-center">
@@ -69,7 +68,14 @@ function Service() {
               <p className="text-gray-400 mb-3">{skill.description}</p>
               <div>
                 <p className="text-gray-400 font-semibold dark:text-gray-100 text-sm uppercase">
-                  {skill.tags}
+                  {skill.tags.split(",").map((tag) => (
+                    <span
+                      className="ml-2 rounded-md p-2 bg-gray-100 dark:bg-slate-500"
+                      key={tag}
+                    >
+                      {tag.trim()}
+                    </span>
+                  ))}
                 </p>
               </div>
             </div>
