@@ -3,7 +3,7 @@ import createClient from "../client";
 import SkeletonElement from "../skeletons/SkeletonElement";
 
 function BootCampItems() {
-  const [bootCamps, setBootCamps] = useState(null);
+  const [bootCamps, setBootCamps] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,9 +51,12 @@ function BootCampItems() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-10">
-        {!bootCamps &&
-          [1, 2, 3, 4, 5, 6].map((n) => <SkeletonElement key={n} />)}
-        {bootCamps &&
+        
+        {bootCamps.length < 1 ? (
+          <h1 className="text-slate-800 dark:text-white text-2xl mt-4">
+            There are no bootcamps events at the moment!
+          </h1>
+        ) : (
           bootCamps.map((bootCamp, index) => (
             <div
               className=" lg:w-[380px]  p-3 dark:bg-slate-800 shadow rounded dark:hover:outline outline-1 dark:outline-slate-400 hover:shadow-lg duration-300 hover:scale-105 hover:shadow-xl"
@@ -104,26 +107,9 @@ function BootCampItems() {
                 </a>
               </div>
             </div>
-          ))}
+          ))
+        )}
       </div>
-      {/* Pagination */}
-      {/* <div className="w-[300px] flex justify-center py-2 items-center mx-auto space-x-6">
-        <button
-          disabled={currentPage === 1}
-          onClick={() => setCurrentPage(currentPage - 1)}
-          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100  items-center flex rounded-full cursor-pointer"
-        >
-          <ion-icon name="arrow-back-outline"></ion-icon>
-        </button>
-
-        <button
-          disabled={endIndex >= projectData.length}
-          onClick={() => setCurrentPage(currentPage + 1)}
-          className="p-2 bg-gray-300 dark:bg-gray-500 text-slate-700 dark:text-gray-100 items-center flex rounded-full cursor-pointer"
-        >
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </button>
-      </div> */}
     </section>
   );
 }
