@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { socialItems } from "../../data";
 import NavBar from "../components/NavBar";
 import LogoSlider from "../components/LogoSlider";
@@ -25,6 +25,16 @@ function Home() {
   const [clock, setClock] = useState(new Date().toLocaleTimeString());
   setInterval(() => {
     setClock(new Date().toLocaleTimeString());
+  });
+
+  const [text, count] = useTypewriter({
+    words: [
+      "Hey The Name's Evans Elabo",
+      "Guy-who-loves-Gaming-Music.tsx",
+      "<ButLovesToShowCode.jsx>",
+    ],
+    loop: true,
+    delaySpeed: 0,
   });
 
   return (
@@ -71,9 +81,10 @@ function Home() {
             </p>
           </div>
           <div className="dark:text-white  text-gray-800 lg:px-0">
-            <h1 className=" text-[18px] text-center">{greeting} I'm</h1>
-            <h2 className="font-bold text-[40px] my-2 lg:text-[65px] text-center uppercase">
-              Evans Elabo <span className="">✨</span>
+            <h1 className=" text-[18px] text-center">{greeting}</h1>
+            <h2 className="font-bold text-[40px] my-2 lg:text-[50px] text-center">
+              {text}
+              <Cursor cursorColor="gold" />
             </h2>
             <p className="text-center xl:px-80 mb-4 dark:text-slate-400">
               I am a student and self-taught software developer specialized in
