@@ -28,7 +28,7 @@ function Home() {
   });
 
   const words = [
-    "Hey The Name's Evans Elabo",
+    "Hey",
     "<ButLovesToShowCode.jsx>",
     "Guy-who-loves-Gaming-Music.tsx",
   ];
@@ -81,7 +81,12 @@ function Home() {
             <h2 className="font-bold text-[40px] my-2 lg:text-[50px] text-center">
               <Typewriter
                 options={{
-                  strings: [...words],
+                  strings: [
+                    "I'm Evans Elabo",
+                    "I'm a Software Developer",
+                    "I'm a UI/UX Designer",
+                    "I'm a Graphics Designer",
+                  ],
                   autoStart: true,
                   loop: true,
                 }}
