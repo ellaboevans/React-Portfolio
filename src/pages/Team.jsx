@@ -7,7 +7,7 @@ function Team() {
   return (
     <div className="dark:bg-slate-800 duration-100 h-screen w-full overflow-x-hidden scrollbar-thin scrollbar-thumb-sky-600 dark:scrollbar-track-slate-700 scrollbar-track-gray-200 scrollbar-rounded-md">
       <Helmet>
-        <title>codeConcept - Team</title>
+        <title>codeConcept | Team</title>
         <link rel="canonical" href="/team" />
       </Helmet>
       <NavBar />
