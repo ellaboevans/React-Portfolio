@@ -97,7 +97,7 @@ function NavBar() {
   };
 
   return (
-    <nav className=" w-screen z-10 md:fixed outline outline-gray-600 outline-1 dark:bg-slate-800 py-1 px-10 xl:px-24 dark:text-white overflow-hidden">
+    <nav className=" w-screen z-10 md:sticky lg:fixed outline outline-gray-600 outline-1 dark:bg-slate-800 py-1 px-10 xl:px-24 dark:text-white overflow-hidden">
       <div className="flex justify-between my-4  md:justify-between items-center">
         <motion.a
           variants={logoVariants}
