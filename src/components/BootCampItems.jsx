@@ -53,7 +53,7 @@ function BootCampItems() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-10">
         
         {bootCamps.length < 1 ? (
-          <h1 className="text-slate-800 dark:text-white text-2xl mt-4">
+          <h1 className="text-slate-800 text-center md:text-left dark:text-white text-2xl mt-4">
             There are no bootcamps events at the moment!
           </h1>
         ) : (
