@@ -70,7 +70,7 @@ function Service() {
                 <p className="text-gray-400 font-semibold dark:text-gray-100 text-sm uppercase">
                   {skill.tags.split(",").map((tag) => (
                     <span
-                      className="mr-2 rounded-md p-2 bg-gray-100 dark:bg-slate-500"
+                      className="mr-2 rounded-md p-2 bg-gray-100 dark:bg-slate-700"
                       key={tag}
                     >
                       {tag.trim()}
