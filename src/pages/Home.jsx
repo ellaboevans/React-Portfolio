@@ -82,7 +82,7 @@ function Home() {
               <Typewriter
                 options={{
                   strings: [
-                    "I'm Evans Elabo",
+                    "Hi, The Name is Evans Elabo",
                     "I'm a Software Developer",
                     "I'm a UI/UX Designer",
                     "I'm a Graphics Designer",
