@@ -42,7 +42,7 @@ function ProjectPortfolio() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100">
-      <div className="xl:px-24 px-8 md:px-14 mt-10 xl:w-2/4 ">
+      <div className="xl:px-24 px-8 md:px-14 mt-10 md:mt-20 xl:w-2/4 ">
         <h1 className="dark:text-gray-200 xl:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
           Projects🚀
         </h1>

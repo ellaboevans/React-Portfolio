@@ -38,7 +38,7 @@ function AboutSection() {
   //   console.log(aboutData);
 
   return (
-    <section className="flex flex-col items-center space-y-8 md:space-y-0  md:flex-row md:items-start md:space-x-4 lg:space-x-14 justify-between md:px-10 p-20 ">
+    <section className="flex flex-col items-center space-y-8 md:space-y-0 md:mt-16  md:flex-row md:items-start md:space-x-4 lg:space-x-14 justify-between md:px-10 p-20 ">
       {!aboutData && <SkeletonAbout />}
       {aboutData &&
         aboutData.map((result, index) => (

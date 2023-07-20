@@ -35,11 +35,11 @@ function Home() {
           name="description"
           content="I am a student and self-taught software developer specialized in Mobile App Development & Frontend Web Development. I also teach and mentor in the field of Web ..."
         />
-        
+
         <link rel="canonical" href="/" />
       </Helmet>
       <NavBar />
-      <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 md:-my-8 lg:my-0">
+      <div className="  flex items-center px-4 lg:px-8 jusitfy-between h-screeen py-32 w-full duration-100 my-8 ">
         {/* Left Side Items */}
 
         <div className=" hidden md:flex items-center dark:text-gray-100 flex-col space-y-3 mt-28 lg:mt-0 px-3 animate-[bounce_4s_infinite] hover:animate-none">

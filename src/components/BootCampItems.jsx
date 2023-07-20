@@ -37,7 +37,7 @@ function BootCampItems() {
 
   return (
     <section className="w-screen py-8 dark:bg-slate-800 duration-100 ">
-      <div className="lg:px-24 px-8 mt-10 xl:w-2/4 ">
+      <div className="lg:px-24 px-8 mt-10 md:mt-20 xl:w-2/4 ">
         <h1 className="dark:text-gray-200 xl:text-left text-center uppercase text-slate-700 text-[30px] font-semibold">
           CODE WITH CONCEPT🚀
         </h1>
@@ -51,7 +51,6 @@ function BootCampItems() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center px-12 lg:px-24 py-6 gap-10">
-        
         {bootCamps.length < 1 ? (
           <h1 className="text-slate-800 text-center md:text-left dark:text-white text-2xl mt-4">
             There are no bootcamps events at the moment!
