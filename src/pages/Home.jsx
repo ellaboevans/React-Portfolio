@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
+import Typewriter from "typewriter-effect";
 import { socialItems } from "../../data";
 import NavBar from "../components/NavBar";
 import LogoSlider from "../components/LogoSlider";
@@ -27,15 +27,11 @@ function Home() {
     setClock(new Date().toLocaleTimeString());
   });
 
-  const [text, count] = useTypewriter({
-    words: [
-      "Hey The Name's Evans Elabo",
-      "Guy-who-loves-Gaming-Music.tsx",
-      "<ButLovesToShowCode.jsx>",
-    ],
-    loop: true,
-    delaySpeed: 0,
-  });
+  const words = [
+    "Hey The Name's Evans Elabo",
+    "<ButLovesToShowCode.jsx>",
+    "Guy-who-loves-Gaming-Music.tsx",
+  ];
 
   return (
     <div className="bg-heroWhite bg-contain bg-blend-mulitply dark:bg-her dark:bg-cover bg-center dark:bg-blend-soft-light z-10 h-screen overflow-x-hidden bg-white dark:bg-slate-800 duration-100  scrollbar-thin scrollbar-thumb-sky-600 dark:scrollbar-track-slate-700 scrollbar-track-gray-200 scrollbar-rounded-md">
@@ -83,8 +79,13 @@ function Home() {
           <div className="dark:text-white  text-gray-800 lg:px-0">
             <h1 className=" text-[18px] text-center">{greeting}</h1>
             <h2 className="font-bold text-[40px] my-2 lg:text-[50px] text-center">
-              {text}
-              <Cursor cursorColor="gold" />
+              <Typewriter
+                options={{
+                  strings: [...words],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </h2>
             <p className="text-center xl:px-80 mb-4 dark:text-slate-400">
               I am a student and self-taught software developer specialized in
