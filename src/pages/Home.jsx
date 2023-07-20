@@ -35,6 +35,17 @@ function Home() {
           name="description"
           content="I am a student and self-taught software developer specialized in Mobile App Development & Frontend Web Development. I also teach and mentor in the field of Web ..."
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dev_concept" />
+        <meta name="twitter:title" content="Evans Elabo | Home" />
+        <meta
+          name="twitter:description"
+          content="I am a student and self-taught software developer specialized in Mobile App Development & Frontend Web Development. I also teach and mentor in the field of Web ..."
+        />
+        <meta
+          name="twitter:image"
+          content="https://pbs.twimg.com/media/E_w-NPEXoAEGTOM?format=jpg&name=medium"
+        />
         <link rel="canonical" href="/" />
       </Helmet>
       <NavBar />
