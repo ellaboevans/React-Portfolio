@@ -67,7 +67,7 @@ function NavBar() {
   };
   const logoVariants = {
     hidden: {
-      x: "-1000%",
+      x: -500,
     },
     visible: {
       x: 0,
@@ -78,7 +78,7 @@ function NavBar() {
   };
   const navigationVariants = {
     hidden: {
-      x: "1000%",
+      x: 500,
     },
     visible: {
       x: 0,

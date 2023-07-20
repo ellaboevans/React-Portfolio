@@ -3,7 +3,7 @@ import { ThreeCircles } from "react-loader-spinner";
 
 function Loader() {
   return (
-    <div className="flex flex-col items-center justify-center absolute top-0 left-0 right-0 bg-gray-200 z-10 h-screen overflow-hidden">
+    <div className="flex flex-col items-center justify-center absolute top-0 left-0 right-0 bg-gray-200 z-20 h-screen overflow-hidden">
       <ThreeCircles
         height="100"
         width="100"
