@@ -68,22 +68,30 @@ function NavBar() {
   const logoVariants = {
     hidden: {
       x: -500,
+      opacity: 0,
+      scale: 0.5,
     },
     visible: {
       x: 0,
+      opacity: 1,
+      scale: 1.3,
       transition: {
         delay: 1,
+        duration: 1,
       },
     },
   };
   const navigationVariants = {
     hidden: {
-      x: 500,
+      x: 600,
+      opacity: 0,
     },
     visible: {
       x: 0,
+      opacity: 1,
       transition: {
         delay: 1,
+        duration: 1,
       },
     },
   };
