@@ -78,7 +78,7 @@ function Home() {
           </div>
           <div className="dark:text-white  text-gray-800 lg:px-0">
             <h1 className=" text-[18px] text-center">{greeting}</h1>
-            <h2 className="font-bold text-[40px] my-2 lg:text-[50px] text-center">
+            <h2 className="font-bold text-[40px] my-2 lg:text-[50px] leading-[40px] md:leading-normal text-center">
               <Typewriter
                 options={{
                   strings: [
