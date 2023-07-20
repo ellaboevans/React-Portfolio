@@ -65,17 +65,47 @@ function NavBar() {
       y: "-100%",
     },
   };
+  const logoVariants = {
+    hidden: {
+      x: "-1000%",
+    },
+    visible: {
+      x: 0,
+      transition: {
+        delay: 1,
+      },
+    },
+  };
+  const navigationVariants = {
+    hidden: {
+      x: "1000%",
+    },
+    visible: {
+      x: 0,
+      transition: {
+        delay: 1,
+      },
+    },
+  };
 
   return (
     <nav className=" w-screen outline outline-gray-600 outline-1 dark:bg-slate-800 py-4 px-10 xl:px-24 dark:text-white overflow-hidden">
       <div className="flex justify-between my-4  md:justify-between items-center">
-        <a
+        <motion.a
+          variants={logoVariants}
+          initial="hidden"
+          animate="visible"
           href="/"
           className="text-[20px] text-gray-800 dark:text-white font-semibold"
         >
           CodeConcept 🇬🇭
-        </a>
-        <div className="hidden lg:flex  items-center justify-between space-x-3">
+        </motion.a>
+        <motion.div
+          variants={navigationVariants}
+          initial="hidden"
+          animate="visible"
+          className="hidden lg:flex  items-center justify-between space-x-3"
+        >
           {/* Navigation Items */}
           <div className="flex space-x-3 text-gray-800 items-center dark:text-white">
             {navItem.map((item) => (
@@ -98,7 +128,7 @@ function NavBar() {
               </button>
             ))}
           </div>
-        </div>
+        </motion.div>
         <div className="md:hidden flex flex-col  dark:text-gray-100 duration-100  rounded-md cursor-pointer absolute top-[500px] right-0  px-3 ">
           {options.map((option) => (
             <button
@@ -112,12 +142,15 @@ function NavBar() {
             </button>
           ))}
         </div>
-        <div
+        <motion.div
+          variants={navigationVariants}
+          initial="hidden"
+          animate="visible"
           className=" lg:hidden dark:border-white py-1  px-3 dark:border rounded cursor-pointer"
           onClick={() => setIsOpen((isOpen) => !isOpen)}
         >
           <FontAwesomeIcon icon={faBars} />
-        </div>
+        </motion.div>
       </div>
       {/* Mobile Menu Starts */}
       <div className="lg:hidden">
