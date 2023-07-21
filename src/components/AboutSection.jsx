@@ -79,7 +79,7 @@ function AboutSection() {
         {!aboutData && <SkeletonStory />}
         {aboutData &&
           aboutData.map((data, index) => (
-            <p key={index} className="dark:text-gray-200 text-justify">
+            <p key={index} className="dark:text-gray-200 text-center md:text-left">
               {data.description}
             </p>
           ))}
