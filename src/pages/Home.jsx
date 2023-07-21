@@ -72,6 +72,9 @@ function Home() {
 
         <div className=" flex justify-center flex-col space-y-3 items-center">
           <div className="bg-gray-200 -mt-14 py-2 px-4 dark:text-gray-100 dark:bg-slate-700 duration-100  rounded-md">
+            <h4 className="uppercase text-2xl tracking-widest dark:text-gray-100 text-gray-600 text-center">
+              Coding | Designing | Mentoring
+            </h4>
             <p className="text-gray-800 dark:text-white font-semibold text-xl tracking-widest ">
               {clock}
             </p>
